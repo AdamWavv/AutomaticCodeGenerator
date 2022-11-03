@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\adamw\source\AutomaticCodeGenerator\build\CMakeFiles\8075b08864483c6bdf16b509b2284483\Continuous.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\adamw\source\AutomaticCodeGenerator\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\adamw\source\AutomaticCodeGenerator\build\CMakeFiles\Continuous" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9DD09E4A-E9A1-309C-8241-30EB097EBA6D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
