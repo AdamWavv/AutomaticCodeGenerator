@@ -12,7 +12,7 @@ public:
 
 private:
     std::string name;
-    const std::string acces = {};
+    const std::string acces;
 
 };
 

@@ -11,7 +11,7 @@ class ClassBuilder
 
 public:
     ClassBuilder(std::string path);
-    // ~ClassBuilder();
+    ~ClassBuilder() = default;
     //Attributes
     void set_XML_file_path(std::string new_XML_file_path);
     std::string get_XML_file_path();

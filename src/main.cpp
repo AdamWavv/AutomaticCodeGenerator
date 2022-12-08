@@ -8,11 +8,11 @@ using std::cout, std::cin, std::endl;
 
 int main(int argc, char**)
 {
-    ClassBuilder cb(std::string{"nazwa/pierwsza"});
+    ClassBuilder cb("nazwa/pierwsza");
 
     cout << "Nazwa sciezki uzytej podczas konstrukcji" << cb.get_XML_file_path() << '\n';
 
-    std::string first_file {"nazwa/zmieniona"};
+    std::string first_file = "nazwa/zmieniona";
 
     cb.set_XML_file_path(first_file);
 
