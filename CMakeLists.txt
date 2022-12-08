@@ -23,9 +23,12 @@ FILE(GLOB_RECURSE LIB_FILES lib/rapidxml-1.13/*.h*)
 
 add_executable(${PROJECT_NAME} ${HDR_FILES} ${SRC_FILES})
 
+
+# Link the rapidXML library to the "AutomaticCodeGenerator" target
+
 set_target_properties(${PROJECT_NAME} PROPERTIES
     WIN32_EXECUTABLE ON
     MACOSX_BUNDLE ON
 )
 
-#target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)

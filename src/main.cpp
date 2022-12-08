@@ -6,7 +6,7 @@
 
 using std::cout, std::cin, std::endl;
 
-int main(int argc, char**)
+int main(int argc, char* argv[])
 {
     ClassBuilder cb("nazwa/pierwsza");
 
@@ -17,6 +17,8 @@ int main(int argc, char**)
     cb.set_XML_file_path(first_file);
 
     cout << "Nazwa sciezki uzytej po zmianie" << cb.get_XML_file_path() << '\n';
+
+    cb.parse_document();
 
     return EXIT_SUCCESS;
 }
