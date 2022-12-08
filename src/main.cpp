@@ -12,7 +12,7 @@ int main(int argc, char**)
 
     cout << "Nazwa sciezki uzytej podczas konstrukcji" << cb.get_XML_file_path() << '\n';
 
-    std::string first_file = "nazwa/zmieniona";
+    std::string first_file ="nazwa/zmieniona";
 
     cb.set_XML_file_path(first_file);
 
