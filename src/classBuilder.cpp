@@ -11,39 +11,51 @@ void ClassBuilder::clear(){
     std::cout<<"dupa";
 }
 
-void parse_document()
+
+
+
+
+
+
+
+
+
+
+void ClassBuilder::parse_document()
 {
+    const std::string& xml_in = this->xml_file_path;
+
     rapidxml::xml_document<> doc;
     rapidxml::xml_node<> * root_node = NULL;
+        std::cout << "\nParsing my students data (example.xml)..... \n";
    
-    std::cout << "\nParsing my students data (sample.xml)....." << endl;
-   
-    // Read the sample.xml file
-    std::ifstream theFile ("sample.xml");
-    std::vector<char> buffer((std::istreambuf_iterator<char>(theFile)), istreambuf_iterator<char>());
+    // Read the xml_in file
+    std::ifstream theFile (xml_in);
+    //Creating buffer for data proces
+    std::vector<char> buffer((std::istreambuf_iterator<char>(theFile)), std::istreambuf_iterator<char>());
     buffer.push_back('\0');
-   
     // Parse the buffer
     doc.parse<0>(&buffer[0]);
-   
     // Find out the root node
-    root_node = doc.first_node("MyStudentsData");
+    root_node = doc.first_node("Project");
+    
+    rapidxml::xml_node<> * models_node = root_node->first_node()->next_sibling("Models");
    
     // Iterate over the student nodes
-    for (xml_node<> * student_node = root_node->first_node("Student");
-                student_node; student_node = student_node->next_sibling())
+    for (rapidxml::xml_node<> * models_node = root_node->first_node("Models");
+                                models_node; models_node = models_node->next_sibling())
     {
-        std::cout << "\nStudent Type =   " <<
-                student_node->first_attribute("student_type")->value();
-        std::cout << endl;
+        std::cout << "\n Class Name =   " <<
+                models_node->first_attribute("Name")->value();
+        std::cout << "\n";
            
-            // Interate over the Student Names
-        for(xml_node<> * student_name_node = student_node->first_node("Name");
-                student_name_node; student_name_node = student_name_node->next_sibling())
+        // Interate over the Student Names
+        for(rapidxml::xml_node<> * class_name_node = models_node->first_node("Name");
+                class_name_node; class_name_node = class_name_node->next_sibling())
         {
-            std::cout << "Student Name =   " << student_name_node->value();
-            std::cout << endl;
+            std::cout << "Class Name =   " << class_name_node->value();
+            std::cout << "\n";
         }
-        std::cout << endl;
+        std::cout << "\n";
     }
 }
