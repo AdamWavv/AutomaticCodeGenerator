@@ -6,6 +6,8 @@
 #include <vector>
 #include <iterator>
 #include <string>
+#include <cstring>
+
 #include "../lib/rapidxml-1.13/rapidxml.hpp"
 
 // namespace rapidxml {
