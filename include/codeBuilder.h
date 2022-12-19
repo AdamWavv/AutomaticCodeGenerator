@@ -48,16 +48,19 @@ public:
     CodeBuilder(std::string path);
     ~CodeBuilder() = default;
     
-    //Attributes
+//Methods
     void parse_document();
     void set_XML_file_path(std::string new_XML_file_path);
     std::string get_XML_file_path();
     rapidxml::xml_node<>* get_node(rapidxml::xml_node<>* search_node, const char* search_node_name);
     void clear();
+
 protected:
-    std::vector <std::string> names;
+//Attributes
+    std::vector <std::string> names_vector;
 
 private:
+//Attributes
     std::string xml_file_path;
     
 
