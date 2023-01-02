@@ -25,10 +25,10 @@ rapidxml::xml_node<>* CodeBuilder::get_node(const std::string file_path, const c
     rapidxml::xml_node<> * root_node = nullptr;
     rapidxml::xml_node<> * searched_node = nullptr;
     // Read the xml_in file
-    std::ifstream theFile (file_path);
+    std::ifstream file (file_path);
 
     //Creating buffer to store data from xml file type:CHAR
-    std::vector<char> buffer((std::istreambuf_iterator<char>(theFile)), std::istreambuf_iterator<char>());
+    std::vector<char> buffer((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
     buffer.push_back('\0');
     doc.parse<0>(&buffer[0]);
 
@@ -56,7 +56,7 @@ rapidxml::xml_node<>* CodeBuilder::get_node(const std::string file_path, const c
         << searched_node
         << " Zawiera w sobie:" 
         << searched_node->name() << "\n";
-
+        file.close();
         return searched_node;
     }
     else
@@ -67,9 +67,10 @@ rapidxml::xml_node<>* CodeBuilder::get_node(const std::string file_path, const c
         <<searched_node
         << " Zawiera w sobie:" 
         << searched_node->name() << "\n";
-
+        file.close();
         return searched_node;
     }
+    
 }
 
 
@@ -81,18 +82,20 @@ void CodeBuilder::parse_document()
     const char* xml_in = s.c_str();
     rapidxml::xml_document<> doc;
     rapidxml::xml_node<> * root_node = NULL;
-    std::ifstream theFile (xml_in);
+    std::ifstream file (xml_in);
 
     std::cout << "\nParsing data in: \n" << xml_in << "\n ..... \n";
 
-    if (theFile.is_open())
+    if (file.is_open())
     {   
         
         //Creating buffer to store data from xml file type:CHAR
-        std::vector<char> buffer((std::istreambuf_iterator<char>(theFile)), std::istreambuf_iterator<char>());
+        std::vector<char> buffer((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
         buffer.push_back('\0');
         doc.parse<0>(&buffer[0]);
         const char* searched_node_name = "Class";
+        
+        rapidxml::xml_node<> * test = get_node(xml_in,searched_node_name);
         
         for(rapidxml::xml_node<> * class_node = get_node(xml_in,searched_node_name);
             class_node;  
@@ -102,4 +105,5 @@ void CodeBuilder::parse_document()
         }
     }
     std::cout << "\n \n";
+    file.close();
 }   

@@ -1,0 +1,3 @@
+/home/adam/code/AutomaticCodeGenerator/build/CMakeFiles/rebuild_cache.dir
+/home/adam/code/AutomaticCodeGenerator/build/CMakeFiles/edit_cache.dir
+/home/adam/code/AutomaticCodeGenerator/build/CMakeFiles/AutomaticCodeGenerator.dir
