@@ -7,6 +7,7 @@
 #include <iterator>
 #include <string>
 #include <cstring>
+#include <stdio.h>
 #include <type_traits>
 
 #include "../lib/rapidxml-1.13/rapidxml.hpp"
@@ -52,7 +53,7 @@ public:
     void parse_document();
     void set_XML_file_path(std::string new_XML_file_path);
     std::string get_XML_file_path();
-    rapidxml::xml_node<>* get_node(rapidxml::xml_node<>* search_node, const char* search_node_name);
+    rapidxml::xml_node<>* get_node(const std::string file_path, const char* node_name);
     void clear();
 
 protected:

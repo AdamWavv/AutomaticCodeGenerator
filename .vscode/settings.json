@@ -76,5 +76,6 @@
         "complex": "cpp",
         "set": "cpp",
         "iomanip": "cpp"
-    }
+    },
+    "ros.distro": "noetic"
 }
