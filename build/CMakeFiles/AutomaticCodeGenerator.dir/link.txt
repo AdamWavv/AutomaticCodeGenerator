@@ -1,1 +1,0 @@
-/usr/bin/g++  -g   CMakeFiles/AutomaticCodeGenerator.dir/src/attributeBuilder.cpp.o CMakeFiles/AutomaticCodeGenerator.dir/src/classBuilder.cpp.o CMakeFiles/AutomaticCodeGenerator.dir/src/codeBuilder.cpp.o CMakeFiles/AutomaticCodeGenerator.dir/src/main.cpp.o CMakeFiles/AutomaticCodeGenerator.dir/src/methodBuilder.cpp.o  -o AutomaticCodeGenerator 
