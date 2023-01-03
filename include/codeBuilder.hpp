@@ -47,14 +47,16 @@ class CodeBuilder
 {
 public:
     CodeBuilder(std::string path);
-    ~CodeBuilder() = default;
+    ~CodeBuilder();
     
 //Methods
-    void parse_document();
+    void clear();
+    virtual void parse_document() = 0;
     void set_XML_file_path(std::string new_XML_file_path);
     std::string get_XML_file_path();
-    rapidxml::xml_node<>* get_node(const std::string file_path, const char* node_name);
-    void clear();
+    std::string generateCode();
+    rapidxml::xml_node<>* search_node(const std::string file_path, const char* node_name);
+    
 
 protected:
 //Attributes

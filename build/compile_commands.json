@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/adam/code/AutomaticCodeGenerator/build",
+  "command": "/usr/bin/g++   -I/home/adam/code/AutomaticCodeGenerator/include -I/home/adam/code/AutomaticCodeGenerator/lib/rapidxml-1.13  -g   -std=gnu++17 -o CMakeFiles/AutomaticCodeGenerator.dir/src/attributeBuilder.cpp.o -c /home/adam/code/AutomaticCodeGenerator/src/attributeBuilder.cpp",
+  "file": "/home/adam/code/AutomaticCodeGenerator/src/attributeBuilder.cpp"
+},
+{
+  "directory": "/home/adam/code/AutomaticCodeGenerator/build",
+  "command": "/usr/bin/g++   -I/home/adam/code/AutomaticCodeGenerator/include -I/home/adam/code/AutomaticCodeGenerator/lib/rapidxml-1.13  -g   -std=gnu++17 -o CMakeFiles/AutomaticCodeGenerator.dir/src/classBuilder.cpp.o -c /home/adam/code/AutomaticCodeGenerator/src/classBuilder.cpp",
+  "file": "/home/adam/code/AutomaticCodeGenerator/src/classBuilder.cpp"
+},
+{
+  "directory": "/home/adam/code/AutomaticCodeGenerator/build",
+  "command": "/usr/bin/g++   -I/home/adam/code/AutomaticCodeGenerator/include -I/home/adam/code/AutomaticCodeGenerator/lib/rapidxml-1.13  -g   -std=gnu++17 -o CMakeFiles/AutomaticCodeGenerator.dir/src/codeBuilder.cpp.o -c /home/adam/code/AutomaticCodeGenerator/src/codeBuilder.cpp",
+  "file": "/home/adam/code/AutomaticCodeGenerator/src/codeBuilder.cpp"
+},
+{
+  "directory": "/home/adam/code/AutomaticCodeGenerator/build",
+  "command": "/usr/bin/g++   -I/home/adam/code/AutomaticCodeGenerator/include -I/home/adam/code/AutomaticCodeGenerator/lib/rapidxml-1.13  -g   -std=gnu++17 -o CMakeFiles/AutomaticCodeGenerator.dir/src/main.cpp.o -c /home/adam/code/AutomaticCodeGenerator/src/main.cpp",
+  "file": "/home/adam/code/AutomaticCodeGenerator/src/main.cpp"
+},
+{
+  "directory": "/home/adam/code/AutomaticCodeGenerator/build",
+  "command": "/usr/bin/g++   -I/home/adam/code/AutomaticCodeGenerator/include -I/home/adam/code/AutomaticCodeGenerator/lib/rapidxml-1.13  -g   -std=gnu++17 -o CMakeFiles/AutomaticCodeGenerator.dir/src/methodBuilder.cpp.o -c /home/adam/code/AutomaticCodeGenerator/src/methodBuilder.cpp",
+  "file": "/home/adam/code/AutomaticCodeGenerator/src/methodBuilder.cpp"
+}
+]

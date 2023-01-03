@@ -1,5 +1,0 @@
-#ifndef ATTRIBUTE_BUILDER_H
-#define ATTRIBUTE_BUILDER_H
-
-
-#endif
