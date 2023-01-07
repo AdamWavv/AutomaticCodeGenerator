@@ -20,7 +20,6 @@ void AttributeBuilder::parse_document()
     std::ifstream file (xml_in);
 
     std::cout << "\nParsing data in: \n" << xml_in << "\n ..... \n";
-    std::cout << "TEST LOKALIZACJI PLIKU: " << this->get_XML_file_path() <<"\n";
     if (file.is_open())
     {   
         
@@ -29,18 +28,26 @@ void AttributeBuilder::parse_document()
         buffer.push_back('\0');
         doc.parse<0>(&buffer[0]);
         const char* searched_node_name = "Class";
-        if(search_node(xml_in,searched_node_name))
+        if(search_node(xml_in,searched_node_name)->value())
         {              
             for(rapidxml::xml_node<> * class_node = search_node(xml_in,searched_node_name);
                 class_node;  
                 class_node = class_node->next_sibling(searched_node_name))
             {   
-                std::cout << "Adres " << class_node << class_node->name() << " is named:" << "\n  -" << class_node->first_attribute("Name")->value() <<"\n";
+                std::cout << "Adres " << class_node << " " << class_node->name() << " is named: " << "\n  -" << class_node->first_attribute("Name")->value() << "\n";
+                std::string dupa = class_node->first_attribute("Name")->value();
+                std::cout << "\n" << dupa << "\n";
+                this->names_vector.push_back(dupa);
+                             
             }
+            file.close();
+        }
+        else
+        {
+            std::cout << "WRONG NODE NAME";
+            file.close();
         }
 
-
     }
-    std::cout << "\n \n";
-    file.close();
+    std::cout << "\n \n";  
 }

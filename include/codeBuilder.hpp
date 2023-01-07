@@ -52,8 +52,10 @@ public:
 //Methods
     void clear();
     virtual void parse_document() = 0;
+
     void set_XML_file_path(std::string new_XML_file_path);
     std::string get_XML_file_path();
+    std::vector <std::string> get_names_vector();
     std::string generateCode();
     rapidxml::xml_node<>* search_node(const std::string file_path, const char* node_name);
     

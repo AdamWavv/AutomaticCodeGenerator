@@ -20,15 +20,18 @@ int main(int argc, char* argv[])
     "../data/class_diagram_test/project.xml",
     "../data/class_diagram_medium/project.xml",
     "../data/class_diagram_advanced/project.xml",
-    //"../data/class_diagram_Astar/project.xml"
+    "../data/class_diagram_Astar/project.xml"
     };
 
     std::vector <AttributeBuilder> cb_vector;
     for (const auto i: files)
     {   
         cb.set_XML_file_path(i);
-        std::ifstream plik_in(i);
         cb.parse_document();
+        std::vector <std::string> dupa = cb.get_names_vector();
+        for (auto& element : dupa){
+            std::cout << element << std::endl;
+        }  
     }
     
 
