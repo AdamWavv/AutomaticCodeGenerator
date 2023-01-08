@@ -18,7 +18,6 @@ void ClassBuilder::parse_document()
     rapidxml::xml_node<> * root_node = nullptr;
     std::ifstream file (xml_in);
 
-    std::cout << "\nParsing data in: \n" << xml_in << "\n ..... \n";
     if (file.is_open()){   
         
         //Creating buffer to store data from xml file type:CHAR
@@ -32,7 +31,6 @@ void ClassBuilder::parse_document()
                 class_node;  
                 class_node = class_node->next_sibling(searched_node_name))
             {   
-                std::cout << "Adres " << class_node << " " << class_node->name() << " is named: " << "\n  -" << class_node->first_attribute("Name")->value() << "\n";
                 this->class_vector.push_back(class_node->first_attribute("Name")->value());       
             }
             file.close();
