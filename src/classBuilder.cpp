@@ -26,7 +26,7 @@ void ClassBuilder::parse_document()
         doc.parse<0>(&buffer[0]);
         const char* searched_node_name = "Class";
         if(search_node(xml_in,searched_node_name)->value())
-        {              
+        {   
             for(rapidxml::xml_node<> * class_node = search_node(xml_in,searched_node_name);
                 class_node;  
                 class_node = class_node->next_sibling(searched_node_name))

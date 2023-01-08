@@ -25,7 +25,7 @@ std::string AttributeBuilder::generateCode(){
 void AttributeBuilder::parse_document()
 {
     //PREPARING DOCUMENT TO LOAD DATA FROM XML FILE
-    std::string s = this->get_file_path();
+    std::string s = this->get_file_path(); //ENCAPSULATION
     const char* xml_in = s.c_str();
     rapidxml::xml_document<> doc;
     rapidxml::xml_node<> * root_node = nullptr;
@@ -37,19 +37,21 @@ void AttributeBuilder::parse_document()
         std::vector<char> buffer((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
         buffer.push_back('\0');
         doc.parse<0>(&buffer[0]);
-        const char* searched_node_name = "Class";
-        if(search_node(xml_in,searched_node_name)->value())
-        {              
-            for(rapidxml::xml_node<> * class_node = search_node(xml_in,searched_node_name);
-                class_node;  
-                class_node = class_node->next_sibling(searched_node_name))
+        // const char* searched_node_name = "Class";
+
+        if(search_node(xml_in,"Class")->value()){   
+            rapidxml::xml_node<> * bufor = search_node(xml_in,"Class");
+            bufor = bufor->first_node("ModelChildren");   
+            
+            for(rapidxml::xml_node<> * attribute_node = bufor->first_node("Attribute");
+                attribute_node;  
+                attribute_node = attribute_node->next_sibling("Attribute"))
             {   
-                this->class_vector.push_back(class_node->first_attribute("Name")->value());       
+                this->attribute_vector.push_back(attribute_node->first_attribute("Name")->value());       
             }
             file.close();
         }
-        else
-        {
+        else{
             std::cout << "WRONG NODE NAME";
             file.close();
         }

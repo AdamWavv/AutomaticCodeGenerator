@@ -54,9 +54,9 @@ rapidxml::xml_node<>* CodeBuilder::search_node(const std::string file_path, cons
 
         return searched_node;
     }
-    
+
 }
-std::string CodeBuilder::generateCode() {
+std::string CodeBuilder::generateCode(){
 
     std::vector<std::string> &vec = this->class_vector;
     std::string code;

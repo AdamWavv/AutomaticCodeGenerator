@@ -43,14 +43,15 @@ void MethodBuilder::parse_document()
         buffer.push_back('\0');
         doc.parse<0>(&buffer[0]);
         const char* searched_node_name = "Class";
-        if(search_node(xml_in,searched_node_name)->value())
-        {              
-            for(rapidxml::xml_node<> * class_node = search_node(xml_in,searched_node_name);
-                class_node;  
-                class_node = class_node->next_sibling(searched_node_name))
+        if(search_node(xml_in,"Class")->value()){   
+            rapidxml::xml_node<> * bufor = search_node(xml_in,"Class");
+            bufor = bufor->first_node("ModelChildren");   
+            
+            for(rapidxml::xml_node<> * attribute_node = bufor->first_node("Operation");
+                attribute_node;  
+                attribute_node = attribute_node->next_sibling("Operation"))
             {   
-                std::cout << "Adres " << class_node << " " << class_node->name() << " is named: " << "\n  -" << class_node->first_attribute("Name")->value() << "\n";
-                this->class_vector.push_back(class_node->first_attribute("Name")->value());       
+                this->attribute_vector.push_back(attribute_node->first_attribute("Name")->value());       
             }
             file.close();
         }
