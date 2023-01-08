@@ -11,12 +11,11 @@ public:
     ~AttributeBuilder();
     //Methods
     void parse_document() override;
+    std::string generateCode() override;
 private:
     
 
 };
-
-   
 
 
 #endif

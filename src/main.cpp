@@ -26,12 +26,13 @@ int main(int argc, char* argv[])
     std::vector <AttributeBuilder> cb_vector;
     for (const auto i: files)
     {   
-        cb.set_XML_file_path(i);
+        cb.set_file_path(i);
         cb.parse_document();
-        std::vector <std::string> dupa = cb.get_names_vector();
+        std::vector <std::string> dupa = cb.get_class_vector();
         for (auto& element : dupa){
             std::cout << element << std::endl;
-        }  
+        }
+        cb.clear();  
     }
     
 
