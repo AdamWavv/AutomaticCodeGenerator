@@ -12,7 +12,6 @@ CodeBuilder::~CodeBuilder()
 void CodeBuilder::set_file_path(std::string new_file_path){
     this->xml_file_path = new_file_path;
 }
-
 std::string CodeBuilder::get_file_path(){
     return xml_file_path;
 }
@@ -104,4 +103,6 @@ std::string generate_python_class(const std::string& class_name, const std::vect
 
 void CodeBuilder::clear(){
     this->class_vector.clear();
+    this->attribute_map.clear();
+    this->method_map.clear();
 }

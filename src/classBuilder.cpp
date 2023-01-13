@@ -25,8 +25,8 @@ void ClassBuilder::parse_document()
         buffer.push_back('\0');
         doc.parse<0>(&buffer[0]);
         const char* searched_node_name = "Class";
-        if(search_node(xml_in,searched_node_name)->value())
-        {   
+        if(search_node(xml_in,searched_node_name)->value()){
+            
             for(rapidxml::xml_node<> * class_node = search_node(xml_in,searched_node_name);
                 class_node;  
                 class_node = class_node->next_sibling(searched_node_name))
@@ -35,8 +35,8 @@ void ClassBuilder::parse_document()
             }
             file.close();
         }
-        else
-        {
+        else{
+        
             std::cout << "WRONG NODE NAME";
             file.close();
         }

@@ -8,9 +8,13 @@ AttributeBuilder::~AttributeBuilder()
 {
 }
 
-std::string AttributeBuilder::generateCode(){
+std::unordered_map<std::string, std::vector<std::string>> AttributeBuilder::get_attribute_map(){
+    return attribute_map;
+}
 
-    std::vector<std::string> &vec = this->attribute_vector;
+std::string AttributeBuilder::generateCode(std::string class_name){
+
+    std::vector<std::string> &vec = this->attribute_map[class_name];
     std::string code;
 
     code += "    def __init__(self):\n";
@@ -21,9 +25,7 @@ std::string AttributeBuilder::generateCode(){
 
     return code;
 }
-
-void AttributeBuilder::parse_document()
-{
+void AttributeBuilder::parse_document(){
     //PREPARING DOCUMENT TO LOAD DATA FROM XML FILE
     std::string s = this->get_file_path(); //ENCAPSULATION
     const char* xml_in = s.c_str();
@@ -39,16 +41,39 @@ void AttributeBuilder::parse_document()
         doc.parse<0>(&buffer[0]);
         // const char* searched_node_name = "Class";
 
+        std::cout << "Parsing data in file path: " << "\n" << "........" << "\n" << s << "\n";
+
         if(search_node(xml_in,"Class")->value()){   
-            rapidxml::xml_node<> * bufor = search_node(xml_in,"Class");
-            bufor = bufor->first_node("ModelChildren");   
             
-            for(rapidxml::xml_node<> * attribute_node = bufor->first_node("Attribute");
-                attribute_node;  
-                attribute_node = attribute_node->next_sibling("Attribute"))
+            for(rapidxml::xml_node<> * class_node = search_node(xml_in,"Class");
+            class_node;  
+            class_node = class_node->next_sibling("Class"))
             {   
-                this->attribute_vector.push_back(attribute_node->first_attribute("Name")->value());       
+                //std::cout << class_node->first_attribute("Name")->value() << ": \n";
+
+                rapidxml::xml_node<> * bufor = class_node;
+                bufor = bufor->first_node("ModelChildren");
+                std::vector<std::string> attribute_vector;
+
+                for(rapidxml::xml_node<> * attribute_node = bufor->first_node("Attribute");
+                attribute_node;
+                attribute_node = attribute_node->next_sibling("Attribute"))
+                {   
+                    attribute_vector.push_back(attribute_node->first_attribute("Name")->value()); 
+                }
+                
+                this->attribute_map.insert(std::pair<std::string, std::vector <std::string>>(class_node->first_attribute("Name")->value(), attribute_vector));
+                std::cout << "Attributes: " << "\n";
+                for (const auto [key, values] : this->attribute_map){
+                    std::cout << key << ":" << std::endl;
+                    for (const auto& value : values) {
+                        std::cout << "  " << value << std::endl;
+                    }
+                }
+                attribute_vector.clear();
             }
+            
+             
             file.close();
         }
         else{

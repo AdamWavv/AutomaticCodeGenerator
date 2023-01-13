@@ -12,6 +12,9 @@ public:
     //Methods
     void parse_document() override;
     std::string generateCode() override;
+
+    std::unordered_map<std::string, std::vector<std::string>> get_method_map();
+
 private:
     
 
