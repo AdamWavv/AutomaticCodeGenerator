@@ -13,29 +13,32 @@ std::unordered_map<std::string, std::vector<std::string>> MethodBuilder::get_met
     return method_map;
 }
 
-std::string MethodBuilder::generateCode(){
-
+std::string MethodBuilder::generateCode(std::string class_name){
+    //Converting data with spaces to underscores and put them to method declaration
+    //Create methods segment of code
     std::string code = "";
     code += "\n";
-
-    for (const auto& [key, values] : this->method_map){
-        std::cout << key << ":" << std::endl;
-        for (auto& v : values){
-            
-            // std::replace(v.begin(), v.end(), ' ', '_');
-            const auto target = std::regex{ " " };
-            const auto replacement = std::string{ "_" };
-            std::string method = std::regex_replace(v, target, replacement);
-            std::cout << "POWINNO BYC ZMIENIONE !!! " << method << "\n";
-
-            code += "    def get_" + method + "(self):\n";
-            code += "        return self." + method + "\n";
-            code += "    def set_" + method + "(self, value):\n";
-            code += "        self." + method + " = value\n";
-            code += "\n";
-        }
+    std::vector<std::string> values = this->method_map[class_name];    
+    for (auto& v : values){
+        
+        const auto target = std::regex{ " " };
+        const auto replacement = std::string{ "_" };
+        std::string method = std::regex_replace(v, target, replacement);
+        code += "\t def get_" + method + "(self):\n";
+        code += "\t\t return self." + method + "\n";
+    }
+    code += "\n";
+    for (auto& v : values){
+        //Change space into underscore in
+        const auto target = std::regex{ " " };
+        const auto replacement = std::string{ "_" };
+        std::string method = std::regex_replace(v, target, replacement);
+        code += "\tdef set_" + method + "(self, value):\n";
+        code += "\t\tself." + method + " = value\n";
         
     }
+    code += "\n";  
+    
     std::cout<<code <<"\n";
 
     return code;
@@ -77,15 +80,8 @@ void MethodBuilder::parse_document(){
                     method_vector.push_back(method_node->first_attribute("Name")->value()); 
                     std::cout << " -" << method_node->first_attribute("Name")->value() << "\n";
                 }
-                
+                //Write data from XML file to unordered_map
                 this->method_map.insert(std::pair<std::string, std::vector <std::string>>(class_node->first_attribute("Name")->value(), method_vector));
-                std::cout << "Methods: " << "\n";
-                for (const auto& [key, values] : this->method_map){
-                    std::cout << key << ":" << std::endl;
-                    for (const auto& value : values) {
-                        std::cout << "  " << value << std::endl;
-                    }
-                }
                 method_vector.clear();
                 
             }

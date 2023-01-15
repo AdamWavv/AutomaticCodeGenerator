@@ -22,23 +22,26 @@ public:
     ~CodeBuilder();
 //Methods
 virtual void parse_document() = 0;
-virtual std::string generateCode();
+virtual std::string generateCode() = 0;
 
 void set_file_path(std::string new_XML_file_path);
 std::string get_file_path();
 std::vector <std::string> get_class_vector();
+std::unordered_map<std::string, std::vector <std::string>> get_attribute_map();
+std::unordered_map<std::string, std::vector <std::string>> get_method_map();
 
 rapidxml::xml_node<>* search_node(const std::string file_path, const char* node_name);
 void clear();
 
 protected:
 //Attributes
-    std::vector <std::string> class_vector;
-    std::unordered_map<std::string, std::vector <std::string>> attribute_map;
-    std::unordered_map<std::string, std::vector <std::string>> method_map;
+std::vector <std::string> class_vector;
+std::unordered_map<std::string, std::vector <std::string>> attribute_map;
+std::unordered_map<std::string, std::vector <std::string>> method_map;
 private:
 //Attributes
     std::string xml_file_path;
+    
 };
 
 

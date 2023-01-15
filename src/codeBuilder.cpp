@@ -18,6 +18,13 @@ std::string CodeBuilder::get_file_path(){
 std::vector <std::string> CodeBuilder::get_class_vector(){
     return class_vector;
 }
+std::unordered_map<std::string, std::vector<std::string>> CodeBuilder::get_attribute_map(){
+    return attribute_map;
+}
+std::unordered_map<std::string, std::vector<std::string>> CodeBuilder::get_method_map(){
+    return method_map;
+}
+
 rapidxml::xml_node<>* CodeBuilder::search_node(const std::string file_path, const char* node_name)
 {
     //PREPARING DOCUMENT
@@ -55,54 +62,9 @@ rapidxml::xml_node<>* CodeBuilder::search_node(const std::string file_path, cons
     }
 
 }
-std::string CodeBuilder::generateCode(){
-
-    std::vector<std::string> &vec = this->class_vector;
-    std::string code;
-
-    // Write the class definition
-    for (const auto &str : vec){
-    std::cout << str << std::endl;
-    code += "class " + str + ":\n";
-    }
-    // Write the attributes
-    for (const auto &str : vec) {
-        code += "    " + str + " = None\n";
-    }
-    code += "\n";
-
-    // Write the methods
-    for (const auto &str : vec) {
-        code += "    def " + str + "(self):\n";
-        code += "        pass\n";
-        code += "\n";
-    }
-
-    return code;
-}
-std::string generate_python_class(const std::string& class_name, const std::vector<std::string>& attribute_names)
-{
-    std::string python_code = "class " + class_name + ":\n";
-    python_code += "    def __init__(self):\n";
-    for (const auto& attr : attribute_names)
-    {
-        python_code += "        self." + attr + " = None\n";
-    }
-    python_code += "\n";
-    for (const auto& attr : attribute_names)
-    {
-        python_code += "    def get_" + attr + "(self):\n";
-        python_code += "        return self." + attr + "\n";
-        python_code += "    def set_" + attr + "(self, value):\n";
-        python_code += "        self." + attr + " = value\n";
-        python_code += "\n";
-    }
-    return python_code;
-}
-
-
 void CodeBuilder::clear(){
     this->class_vector.clear();
     this->attribute_map.clear();
     this->method_map.clear();
+    this->xml_file_path.clear();
 }

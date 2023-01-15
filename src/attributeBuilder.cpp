@@ -8,26 +8,41 @@ AttributeBuilder::~AttributeBuilder()
 {
 }
 
-std::unordered_map<std::string, std::vector<std::string>> AttributeBuilder::get_attribute_map(){
-    return attribute_map;
-}
-
 std::string AttributeBuilder::generateCode(std::string class_name){
 
     std::vector<std::string> &vec = this->attribute_map[class_name];
-    std::string code;
+    std::string code = "";
+    code += "\n";
 
     code += "    def __init__(self):\n";
-    for (const auto& attr : vec)
-    {
+    for (const auto& attr : vec){
         code += "        self." + attr + " = None\n";
     }
+       
+    
+
+    for (const auto& [key, values] : this->method_map){
+        std::cout << key << ":" << std::endl;
+        for (auto& v : values){
+            
+            const auto target = std::regex{ " " };
+            const auto replacement = std::string{ "_" };
+            std::string method = std::regex_replace(v, target, replacement);
+            code += "    def get_" + method + "(self):\n";
+            code += "        return self." + method + "\n";
+            code += "    def set_" + method + "(self, value):\n";
+            code += "        self." + method + " = value\n";
+            code += "\n";
+        }
+        
+    }
+    std::cout<<code <<"\n";
 
     return code;
 }
 void AttributeBuilder::parse_document(){
     //PREPARING DOCUMENT TO LOAD DATA FROM XML FILE
-    std::string s = this->get_file_path(); //ENCAPSULATION
+    std::string s = this->get_file_path();
     const char* xml_in = s.c_str();
     rapidxml::xml_document<> doc;
     rapidxml::xml_node<> * root_node = nullptr;
@@ -63,13 +78,6 @@ void AttributeBuilder::parse_document(){
                 }
                 
                 this->attribute_map.insert(std::pair<std::string, std::vector <std::string>>(class_node->first_attribute("Name")->value(), attribute_vector));
-                std::cout << "Attributes: " << "\n";
-                for (const auto [key, values] : this->attribute_map){
-                    std::cout << key << ":" << std::endl;
-                    for (const auto& value : values) {
-                        std::cout << "  " << value << std::endl;
-                    }
-                }
                 attribute_vector.clear();
             }
             

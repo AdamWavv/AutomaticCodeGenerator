@@ -2,6 +2,8 @@
 #define CLASS_BUILDER_H
 
 #include "codeBuilder.hpp"
+#include "attributeBuilder.hpp"
+#include "methodBuilder.hpp"
 
 class ClassBuilder: public CodeBuilder
 {
@@ -11,6 +13,7 @@ public:
     ~ClassBuilder();
     //Methods
     void parse_document() override;
+    std::string generateCode() override;
 private:
     
 
