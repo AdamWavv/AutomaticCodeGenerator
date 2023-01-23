@@ -24,12 +24,12 @@ std::string MethodBuilder::generateCode(std::string class_name){
         const auto target = std::regex{ " " };
         const auto replacement = std::string{ "_" };
         std::string method = std::regex_replace(v, target, replacement);
-        code += "\t def get_" + method + "(self):\n";
-        code += "\t\t return self." + method + "\n";
+        code += "\tdef get_" + method + "(self):\n";
+        code += "\t\treturn self." + method + "\n";
     }
     code += "\n";
     for (auto& v : values){
-        //Change space into underscore in
+        //Change space into underscore
         const auto target = std::regex{ " " };
         const auto replacement = std::string{ "_" };
         std::string method = std::regex_replace(v, target, replacement);

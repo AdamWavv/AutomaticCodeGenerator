@@ -12,32 +12,31 @@ std::string AttributeBuilder::generateCode(std::string class_name){
 
     std::vector<std::string> &vec = this->attribute_map[class_name];
     std::string code = "";
-    code += "\n";
-
-    code += "    def __init__(self):\n";
-    for (const auto& attr : vec){
-        code += "        self." + attr + " = None\n";
-    }
-       
     
-
-    for (const auto& [key, values] : this->method_map){
-        std::cout << key << ":" << std::endl;
-        for (auto& v : values){
-            
+    
+    code += "\n";
+    code += "\tdef __init__(self):\n";
+    for (const auto& attr : vec)
+    {
+        const auto target = std::regex{ " " };
+        const auto replacement = std::string{ "_" };
+        std::string attribute = std::regex_replace(attr, target, replacement);
+        code += "\t\tself." + attribute + " = None\n";
+    }
+    for (const auto& [key, values] : this->method_map)
+    {
+        for (auto& v : values)
+        {
             const auto target = std::regex{ " " };
             const auto replacement = std::string{ "_" };
             std::string method = std::regex_replace(v, target, replacement);
-            code += "    def get_" + method + "(self):\n";
-            code += "        return self." + method + "\n";
-            code += "    def set_" + method + "(self, value):\n";
-            code += "        self." + method + " = value\n";
+            code += "\tdef get_" + method + "(self):\n";
+            code += "\t\treturn self." + method + "\n";
+            code += "\tdef set_" + method + "(self, value):\n";
+            code += "\t\tself." + method + " = value\n";
             code += "\n";
         }
-        
     }
-    std::cout<<code <<"\n";
-
     return code;
 }
 void AttributeBuilder::parse_document(){
@@ -64,8 +63,6 @@ void AttributeBuilder::parse_document(){
             class_node;  
             class_node = class_node->next_sibling("Class"))
             {   
-                //std::cout << class_node->first_attribute("Name")->value() << ": \n";
-
                 rapidxml::xml_node<> * bufor = class_node;
                 bufor = bufor->first_node("ModelChildren");
                 std::vector<std::string> attribute_vector;
@@ -88,7 +85,5 @@ void AttributeBuilder::parse_document(){
             std::cout << "WRONG NODE NAME";
             file.close();
         }
-
     }
-    std::cout << "\n \n";  
 }

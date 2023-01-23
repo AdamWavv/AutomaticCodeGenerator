@@ -24,9 +24,8 @@ std::string ClassBuilder::generateCode(std::string class_name){
 
     for (const auto& class_name: class_vector)
     {
-        code += "class" +  class_name + ":\n";
+        code += "class " +  class_name + ":\n";
         code += ab.generateCode(class_name);
-        std::cout << ab.generateCode(class_name);
         code += mb.generateCode(class_name);
         std::cout << code;
     }
