@@ -27,7 +27,14 @@ int main(int argc, char* argv[])
     for (const auto i: files)
     {   
         ClassBuilder cb(i);
-
+        cb.parse_document();
+        std::vector<std::string> classes = cb.get_class_vector();
+        for (const auto cl: classes)
+        {
+            cb.generateCode(cl);
+        }
+        
+        
     }
     
 
