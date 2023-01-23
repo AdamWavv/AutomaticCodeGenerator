@@ -27,8 +27,7 @@ int main(int argc, char* argv[])
     for (const auto i: files)
     {   
         ClassBuilder cb(i);
-        cb.parse_document();
-        cb.generateCode();
+
     }
     
 

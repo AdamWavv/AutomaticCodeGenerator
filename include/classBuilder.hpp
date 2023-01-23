@@ -12,8 +12,7 @@ public:
     ClassBuilder(std::string path);
     ~ClassBuilder();
     //Methods
-    void parse_document() override;
-    std::string generateCode() override;
+    std::string generateCode(std::string class_name) override;
 private:
     
 
