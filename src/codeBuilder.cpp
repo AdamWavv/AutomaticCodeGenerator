@@ -9,20 +9,20 @@ CodeBuilder::~CodeBuilder()
 {
     clear();
 }
-void CodeBuilder::set_file_path(std::string new_file_path){
-    this->xml_file_path = new_file_path;
+void CodeBuilder::set_file_path(std::string& new_file_path){
+    if (new_file_path == "")
+    {
+        this->xml_file_path;
+    }else
+    {
+            this->xml_file_path = new_file_path;
+    }
 }
 std::string CodeBuilder::get_file_path(){
     return xml_file_path;
 }
-std::vector <std::string> CodeBuilder::get_class_vector(){
+std::vector<std::string> CodeBuilder::get_class_vector(){
     return class_vector;
-}
-std::unordered_map<std::string, std::vector<std::string>> CodeBuilder::get_attribute_map(){
-    return attribute_map;
-}
-std::unordered_map<std::string, std::vector<std::string>> CodeBuilder::get_method_map(){
-    return method_map;
 }
 
 rapidxml::xml_node<>* CodeBuilder::search_node(const std::string file_path, const char* node_name)

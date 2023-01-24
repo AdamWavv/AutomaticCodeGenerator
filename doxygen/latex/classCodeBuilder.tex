@@ -1,0 +1,210 @@
+\hypertarget{classCodeBuilder}{}\doxysection{Code\+Builder Class Reference}
+\label{classCodeBuilder}\index{CodeBuilder@{CodeBuilder}}
+
+
+Inheritance diagram for Code\+Builder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCodeBuilder__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCodeBuilder_a4d7324963938358f5f000465aebb120e}{Code\+Builder}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Constructor, sets the path to the X\+ML file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCodeBuilder_ab3c62f476936526f065f41126cc90985}\label{classCodeBuilder_ab3c62f476936526f065f41126cc90985}} 
+virtual std\+::string {\bfseries generate\+Code} (std\+::string class\+\_\+name)=0
+\item 
+\mbox{\Hypertarget{classCodeBuilder_ae0740d513613d3e83130bada5f12621e}\label{classCodeBuilder_ae0740d513613d3e83130bada5f12621e}} 
+virtual void {\bfseries parse\+\_\+document} ()
+\item 
+void \mbox{\hyperlink{classCodeBuilder_ad6557141c4000a8a054641ea29bd7d19}{set\+\_\+file\+\_\+path}} (std\+::string new\+\_\+\+X\+M\+L\+\_\+file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Sets the path to the X\+ML file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCodeBuilder_a4fdaef43dfa685387391a617cc51effa}{get\+\_\+file\+\_\+path}} ()
+\begin{DoxyCompactList}\small\item\em Returns the path to the X\+ML file. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classCodeBuilder_afc3268fd6293232ee42c9a2fbb2a1959}{get\+\_\+class\+\_\+vector}} ()
+\begin{DoxyCompactList}\small\item\em Returns the vector of class names. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classCodeBuilder_a8e9f418134cedac8212cc45f7f325532}{get\+\_\+attribute\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Returns the map of class names and their attributes. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classCodeBuilder_a3c0d88c4ad7cbf9b013e2bde7498b748}{get\+\_\+method\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Returns the map of class names and their methods. \end{DoxyCompactList}\item 
+rapidxml\+::xml\+\_\+node $\ast$ \mbox{\hyperlink{classCodeBuilder_afd7f1fd76ac9fe383e37a260c25fcb60}{search\+\_\+node}} (const std\+::string file\+\_\+path, const char $\ast$node\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Search for a node in the X\+ML file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCodeBuilder_a7a4086207c27c04c1da7c13b27e23e91}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears class data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classCodeBuilder_a15436e54e70ef9472edeabdf6eedd909}{class\+\_\+vector}}
+\begin{DoxyCompactList}\small\item\em protected Attributes \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classCodeBuilder_adbf2f03fbd951d2726d4ddbfa0c4781e}{attribute\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em an unordered\+\_\+map that stores the names of attributes and corelates them with classes \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classCodeBuilder_a7e84a361a179b2e7cde9960566187d58}{method\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em an unordered\+\_\+map that stores the names of methods and corelates them with classes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCodeBuilder_a4d7324963938358f5f000465aebb120e}\label{classCodeBuilder_a4d7324963938358f5f000465aebb120e}} 
+\index{CodeBuilder@{CodeBuilder}!CodeBuilder@{CodeBuilder}}
+\index{CodeBuilder@{CodeBuilder}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{CodeBuilder()}{CodeBuilder()}}
+{\footnotesize\ttfamily Code\+Builder\+::\+Code\+Builder (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Constructor, sets the path to the X\+ML file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ path to the X\+ML file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCodeBuilder_a7a4086207c27c04c1da7c13b27e23e91}\label{classCodeBuilder_a7a4086207c27c04c1da7c13b27e23e91}} 
+\index{CodeBuilder@{CodeBuilder}!clear@{clear}}
+\index{clear@{clear}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Code\+Builder\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears class data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+\+X\+M\+L\+\_\+file\+\_\+path} & -\/ new path to the X\+ML file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCodeBuilder_a8e9f418134cedac8212cc45f7f325532}\label{classCodeBuilder_a8e9f418134cedac8212cc45f7f325532}} 
+\index{CodeBuilder@{CodeBuilder}!get\_attribute\_map@{get\_attribute\_map}}
+\index{get\_attribute\_map@{get\_attribute\_map}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{get\_attribute\_map()}{get\_attribute\_map()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ Code\+Builder\+::get\+\_\+attribute\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the map of class names and their attributes. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map$<$string, vector$<$string$>$$>$ -\/ map of class names and their attributes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCodeBuilder_afc3268fd6293232ee42c9a2fbb2a1959}\label{classCodeBuilder_afc3268fd6293232ee42c9a2fbb2a1959}} 
+\index{CodeBuilder@{CodeBuilder}!get\_class\_vector@{get\_class\_vector}}
+\index{get\_class\_vector@{get\_class\_vector}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{get\_class\_vector()}{get\_class\_vector()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Code\+Builder\+::get\+\_\+class\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the vector of class names. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$string$>$ -\/ vector of class names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCodeBuilder_a4fdaef43dfa685387391a617cc51effa}\label{classCodeBuilder_a4fdaef43dfa685387391a617cc51effa}} 
+\index{CodeBuilder@{CodeBuilder}!get\_file\_path@{get\_file\_path}}
+\index{get\_file\_path@{get\_file\_path}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{get\_file\_path()}{get\_file\_path()}}
+{\footnotesize\ttfamily std\+::string Code\+Builder\+::get\+\_\+file\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the path to the X\+ML file. 
+
+\begin{DoxyReturn}{Returns}
+string -\/ path to the X\+ML file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCodeBuilder_a3c0d88c4ad7cbf9b013e2bde7498b748}\label{classCodeBuilder_a3c0d88c4ad7cbf9b013e2bde7498b748}} 
+\index{CodeBuilder@{CodeBuilder}!get\_method\_map@{get\_method\_map}}
+\index{get\_method\_map@{get\_method\_map}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{get\_method\_map()}{get\_method\_map()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ Code\+Builder\+::get\+\_\+method\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the map of class names and their methods. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map$<$string, vector$<$string$>$$>$ -\/ map of class names and their methods 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCodeBuilder_afd7f1fd76ac9fe383e37a260c25fcb60}\label{classCodeBuilder_afd7f1fd76ac9fe383e37a260c25fcb60}} 
+\index{CodeBuilder@{CodeBuilder}!search\_node@{search\_node}}
+\index{search\_node@{search\_node}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{search\_node()}{search\_node()}}
+{\footnotesize\ttfamily rapidxml\+::xml\+\_\+node $\ast$ Code\+Builder\+::search\+\_\+node (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+\_\+path,  }\item[{const char $\ast$}]{node\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Search for a node in the X\+ML file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & -\/ path to the X\+ML file \\
+\hline
+{\em node\+\_\+name} & -\/ name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rapidxml\+::xml\+\_\+node$<$$>$$\ast$ -\/ pointer to node in xml file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCodeBuilder_ad6557141c4000a8a054641ea29bd7d19}\label{classCodeBuilder_ad6557141c4000a8a054641ea29bd7d19}} 
+\index{CodeBuilder@{CodeBuilder}!set\_file\_path@{set\_file\_path}}
+\index{set\_file\_path@{set\_file\_path}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{set\_file\_path()}{set\_file\_path()}}
+{\footnotesize\ttfamily void Code\+Builder\+::set\+\_\+file\+\_\+path (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+\_\+\+X\+M\+L\+\_\+file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Sets the path to the X\+ML file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+\+X\+M\+L\+\_\+file\+\_\+path} & -\/ new path to the X\+ML file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCodeBuilder_adbf2f03fbd951d2726d4ddbfa0c4781e}\label{classCodeBuilder_adbf2f03fbd951d2726d4ddbfa0c4781e}} 
+\index{CodeBuilder@{CodeBuilder}!attribute\_map@{attribute\_map}}
+\index{attribute\_map@{attribute\_map}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{attribute\_map}{attribute\_map}}
+{\footnotesize\ttfamily Code\+Builder\+::attribute\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+an unordered\+\_\+map that stores the names of attributes and corelates them with classes 
+
+this unordered\+\_\+map is used to hold the names of attributes that are parsed from the xml file \mbox{\Hypertarget{classCodeBuilder_a15436e54e70ef9472edeabdf6eedd909}\label{classCodeBuilder_a15436e54e70ef9472edeabdf6eedd909}} 
+\index{CodeBuilder@{CodeBuilder}!class\_vector@{class\_vector}}
+\index{class\_vector@{class\_vector}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{class\_vector}{class\_vector}}
+{\footnotesize\ttfamily Code\+Builder\+::class\+\_\+vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+protected Attributes 
+
+a vector that stores the names of classes
+
+this vector is used to hold the names of classes that are parsed from the xml file \mbox{\Hypertarget{classCodeBuilder_a7e84a361a179b2e7cde9960566187d58}\label{classCodeBuilder_a7e84a361a179b2e7cde9960566187d58}} 
+\index{CodeBuilder@{CodeBuilder}!method\_map@{method\_map}}
+\index{method\_map@{method\_map}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{method\_map}{method\_map}}
+{\footnotesize\ttfamily Code\+Builder\+::method\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+an unordered\+\_\+map that stores the names of methods and corelates them with classes 
+
+this unordered\+\_\+map is used to hold the names of methods that are parsed from the xml file 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/code/studia/\+Automatic\+Code\+Generator/include/\mbox{\hyperlink{codeBuilder_8hpp}{code\+Builder.\+hpp}}\item 
+/home/adam/code/studia/\+Automatic\+Code\+Generator/src/code\+Builder.\+cpp\end{DoxyCompactItemize}

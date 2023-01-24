@@ -1,0 +1,102 @@
+\hypertarget{classClassBuilder}{}\doxysection{Class\+Builder Class Reference}
+\label{classClassBuilder}\index{ClassBuilder@{ClassBuilder}}
+
+
+Class for generating code for classes.  
+
+
+
+
+{\ttfamily \#include $<$class\+Builder.\+hpp$>$}
+
+
+
+Inheritance diagram for Class\+Builder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classClassBuilder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Class\+Builder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classClassBuilder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classClassBuilder_a2726e16a6447e3f0c3ed0c97b7d01967}{Class\+Builder}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classClassBuilder_af8b72644209942026c11ec86b4eadced}\label{classClassBuilder_af8b72644209942026c11ec86b4eadced}} 
+\mbox{\hyperlink{classClassBuilder_af8b72644209942026c11ec86b4eadced}{$\sim$\+Class\+Builder}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classClassBuilder_a483ba9af40cc7bf76b44df7e5b3d58f3}{generate\+Code}} (std\+::string class\+\_\+name) override
+\begin{DoxyCompactList}\small\item\em Generates code for a class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class for generating code for classes. 
+
+This class is responsible for generating code for classes. It inherits from the \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}} class and uses the \mbox{\hyperlink{classAttributeBuilder}{Attribute\+Builder}} and \mbox{\hyperlink{classMethodBuilder}{Method\+Builder}} classes to generate code for attributes and methods respectively. \begin{DoxyAuthor}{Author}
+Adam Wawerski 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+, \mbox{\hyperlink{attributeBuilder_8hpp}{attribute\+Builder.\+hpp}}, \mbox{\hyperlink{methodBuilder_8hpp}{method\+Builder.\+hpp}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classClassBuilder_a2726e16a6447e3f0c3ed0c97b7d01967}\label{classClassBuilder_a2726e16a6447e3f0c3ed0c97b7d01967}} 
+\index{ClassBuilder@{ClassBuilder}!ClassBuilder@{ClassBuilder}}
+\index{ClassBuilder@{ClassBuilder}!ClassBuilder@{ClassBuilder}}
+\doxysubsubsection{\texorpdfstring{ClassBuilder()}{ClassBuilder()}}
+{\footnotesize\ttfamily Class\+Builder\+::\+Class\+Builder (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ path to the X\+ML file used to generate the code \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classClassBuilder_a483ba9af40cc7bf76b44df7e5b3d58f3}\label{classClassBuilder_a483ba9af40cc7bf76b44df7e5b3d58f3}} 
+\index{ClassBuilder@{ClassBuilder}!generateCode@{generateCode}}
+\index{generateCode@{generateCode}!ClassBuilder@{ClassBuilder}}
+\doxysubsubsection{\texorpdfstring{generateCode()}{generateCode()}}
+{\footnotesize\ttfamily std\+::string Class\+Builder\+::generate\+Code (\begin{DoxyParamCaption}\item[{std\+::string}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Generates code for a class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+\_\+name} & -\/ name of the class for which the code will be generated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string containing the generated code 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/code/studia/\+Automatic\+Code\+Generator/include/class\+Builder.\+hpp\item 
+/home/adam/code/studia/\+Automatic\+Code\+Generator/src/class\+Builder.\+cpp\end{DoxyCompactItemize}

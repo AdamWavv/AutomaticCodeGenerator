@@ -8,11 +8,6 @@ MethodBuilder::MethodBuilder(std::string path)
 MethodBuilder::~MethodBuilder()
 {
 }
-
-std::unordered_map<std::string, std::vector<std::string>> MethodBuilder::get_method_map(){
-    return method_map;
-}
-
 std::string MethodBuilder::generateCode(std::string class_name){
     //Converting data with spaces to underscores and put them to method declaration
     //Create methods segment of code

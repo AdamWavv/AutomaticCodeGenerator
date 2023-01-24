@@ -16,14 +16,14 @@
 #include "../lib/rapidxml-1.13/rapidxml.hpp"
 
 /**
-
-    @file codeBuilder.hpp
-    @brief CodeBuilder class header file
-    @author Adam Wawerski
-    @include iostream, fstream, vector, unordered_map, iterator, string, cstring, stdio.h, type_traits, algorithm, regex, "../lib/rapidxml-1.13/rapidxml.hpp"
+* @class ClassBuilder
+* @brief CodeBuilder class header file
+* @details This Super class is responsible for generating code for classes. It provides based methods and attributes.
+* @author Adam Wawerski
+* @include iostream, fstream, vector, unordered_map, iterator, string, cstring, stdio.h, type_traits, algorithm, regex, "../lib/rapidxml-1.13/rapidxml.hpp"
     This class provides a base for building other classes that will parse data from xml file and generate code from it.
     It also provides basic functionalities for handling xml files and searching for specific nodes in the file.
-    */
+*/
 
 class CodeBuilder
 {
@@ -53,7 +53,7 @@ virtual void parse_document();
  * @brief Sets the path to the XML file
  * @param new_XML_file_path - new path to the XML file
  */
-void set_file_path(std::string new_XML_file_path);
+void set_file_path(std::string &new_XML_file_path);
 /**
  * @brief Returns the path to the XML file
  * @return string - path to the XML file
@@ -64,16 +64,7 @@ std::string get_file_path();
  * @return vector<string> - vector of class names
  */
 std::vector <std::string> get_class_vector();
-/**
- * @brief Returns the map of class names and their attributes
- * @return unordered_map<string, vector<string>> - map of class names and their attributes
- */
-std::unordered_map<std::string, std::vector <std::string>> get_attribute_map();
-/**
- * @brief Returns the map of class names and their methods
- * @return unordered_map<string, vector<string>> - map of class names and their methods
- */
-std::unordered_map<std::string, std::vector <std::string>> get_method_map();
+
 /**
  * @brief Search for a node in the XML file
  * @param file_path - path to the XML file

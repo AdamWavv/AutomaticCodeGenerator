@@ -27,7 +27,7 @@ MethodBuilder(std::string path);
 */
 ~MethodBuilder();
 
-//Methods
+///Methods
 /**
 * @brief        Overriden function from the CodeBuilder class, used to parse the data from the XML file
 */
@@ -36,7 +36,7 @@ void parse_document() override;
 /**
 * @brief        Generates code for methods in a class, based on the data parsed from the XML file
 * @param[in]    class_name  The name of the class for which the code is to be generated
-* @return       A string containing the generated code
+* @return       std::string containing the generated code
 */
 std::string generateCode(std::string class_name);
 
@@ -45,9 +45,6 @@ std::string generateCode(std::string class_name);
 * @return       An unordered_map containing the methods of each class in the form <class_name, vector of method names>
 */
 std::unordered_map<std::string, std::vector<std::string>> get_method_map();
-
-private:
-//Attributes
 
 };
 

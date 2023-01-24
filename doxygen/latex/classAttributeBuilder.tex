@@ -1,0 +1,93 @@
+\hypertarget{classAttributeBuilder}{}\doxysection{Attribute\+Builder Class Reference}
+\label{classAttributeBuilder}\index{AttributeBuilder@{AttributeBuilder}}
+
+
+Inheritance diagram for Attribute\+Builder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classAttributeBuilder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Attribute\+Builder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classAttributeBuilder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAttributeBuilder_a52535b6be565eb6d07f307766dd976d5}\label{classAttributeBuilder_a52535b6be565eb6d07f307766dd976d5}} 
+{\bfseries Attribute\+Builder} (std\+::string path)
+\item 
+void \mbox{\hyperlink{classAttributeBuilder_a43aa3e3c381bec32ad7d811dae4ca5dd}{parse\+\_\+document}} () override
+\begin{DoxyCompactList}\small\item\em parse data from xml file @detail parse\+\_\+document method parse data from xml file and stores it in attribute\+\_\+map \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classAttributeBuilder_af444917725c223493dc0fb1114cf4189}{get\+\_\+attribute\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em getter for attribute\+\_\+map @detail getter method for attribute\+\_\+map \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAttributeBuilder_a6f26bee9fc639f404d61471784796b2b}{generate\+Code}} (std\+::string class\+\_\+name)
+\begin{DoxyCompactList}\small\item\em generate code for attributes @detail generate\+Code method generates code for attributes based on data stored in attribute\+\_\+map \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAttributeBuilder_a6f26bee9fc639f404d61471784796b2b}\label{classAttributeBuilder_a6f26bee9fc639f404d61471784796b2b}} 
+\index{AttributeBuilder@{AttributeBuilder}!generateCode@{generateCode}}
+\index{generateCode@{generateCode}!AttributeBuilder@{AttributeBuilder}}
+\doxysubsubsection{\texorpdfstring{generateCode()}{generateCode()}}
+{\footnotesize\ttfamily std\+::string Attribute\+Builder\+::generate\+Code (\begin{DoxyParamCaption}\item[{std\+::string}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+generate code for attributes @detail generate\+Code method generates code for attributes based on data stored in attribute\+\_\+map 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & class\+\_\+ \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}}.
+
+\mbox{\Hypertarget{classAttributeBuilder_af444917725c223493dc0fb1114cf4189}\label{classAttributeBuilder_af444917725c223493dc0fb1114cf4189}} 
+\index{AttributeBuilder@{AttributeBuilder}!get\_attribute\_map@{get\_attribute\_map}}
+\index{get\_attribute\_map@{get\_attribute\_map}!AttributeBuilder@{AttributeBuilder}}
+\doxysubsubsection{\texorpdfstring{get\_attribute\_map()}{get\_attribute\_map()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::vector$<$std\+::string$>$ $>$ Attribute\+Builder\+::get\+\_\+attribute\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for attribute\+\_\+map @detail getter method for attribute\+\_\+map 
+
+\begin{DoxyReturn}{Returns}
+std\+::unordered\+\_\+map$<$std\+::string, std\+::vector$<$std\+::string$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAttributeBuilder_a43aa3e3c381bec32ad7d811dae4ca5dd}\label{classAttributeBuilder_a43aa3e3c381bec32ad7d811dae4ca5dd}} 
+\index{AttributeBuilder@{AttributeBuilder}!parse\_document@{parse\_document}}
+\index{parse\_document@{parse\_document}!AttributeBuilder@{AttributeBuilder}}
+\doxysubsubsection{\texorpdfstring{parse\_document()}{parse\_document()}}
+{\footnotesize\ttfamily void Attribute\+Builder\+::parse\+\_\+document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+parse data from xml file @detail parse\+\_\+document method parse data from xml file and stores it in attribute\+\_\+map 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/code/studia/\+Automatic\+Code\+Generator/include/\mbox{\hyperlink{attributeBuilder_8hpp}{attribute\+Builder.\+hpp}}\item 
+/home/adam/code/studia/\+Automatic\+Code\+Generator/src/attribute\+Builder.\+cpp\end{DoxyCompactItemize}
