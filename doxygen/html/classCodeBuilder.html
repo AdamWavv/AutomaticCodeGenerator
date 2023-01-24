@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Automatic Code Generator: CodeBuilder Class Reference</title>
+<title>My Project: CodeBuilder Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,10 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Automatic Code Generator
-   &#160;<span id="projectnumber">0.0.1</span>
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">GeneratingobjectcodebasedonprovidedUMLdiagramclass</div>
   </td>
  </tr>
  </tbody>
@@ -71,6 +69,8 @@ $(function() {
 <div class="title">CodeBuilder Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="codeBuilder_8hpp_source.html">codeBuilder.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CodeBuilder:</div>
 <div class="dyncontent">
@@ -88,11 +88,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d7324963938358f5f000465aebb120e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodeBuilder.html#a4d7324963938358f5f000465aebb120e">CodeBuilder</a> (std::string path)</td></tr>
 <tr class="memdesc:a4d7324963938358f5f000465aebb120e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, sets the path to the XML file.  <a href="classCodeBuilder.html#a4d7324963938358f5f000465aebb120e">More...</a><br /></td></tr>
 <tr class="separator:a4d7324963938358f5f000465aebb120e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3c62f476936526f065f41126cc90985"><td class="memItemLeft" align="right" valign="top"><a id="ab3c62f476936526f065f41126cc90985"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>generateCode</b> (std::string class_name)=0</td></tr>
+<tr class="memitem:afdb2787e8a39b0c0aa7870a1d2c703ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodeBuilder.html#afdb2787e8a39b0c0aa7870a1d2c703ec">~CodeBuilder</a> ()</td></tr>
+<tr class="separator:afdb2787e8a39b0c0aa7870a1d2c703ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c62f476936526f065f41126cc90985"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodeBuilder.html#ab3c62f476936526f065f41126cc90985">generateCode</a> (std::string class_name)=0</td></tr>
 <tr class="separator:ab3c62f476936526f065f41126cc90985"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0740d513613d3e83130bada5f12621e"><td class="memItemLeft" align="right" valign="top"><a id="ae0740d513613d3e83130bada5f12621e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_document</b> ()</td></tr>
+<tr class="memitem:ae0740d513613d3e83130bada5f12621e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodeBuilder.html#ae0740d513613d3e83130bada5f12621e">parse_document</a> ()</td></tr>
 <tr class="separator:ae0740d513613d3e83130bada5f12621e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac529982258d534f54576df93c034de50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodeBuilder.html#ac529982258d534f54576df93c034de50">set_file_path</a> (std::string &amp;new_XML_file_path)</td></tr>
 <tr class="memdesc:ac529982258d534f54576df93c034de50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the path to the XML file.  <a href="classCodeBuilder.html#ac529982258d534f54576df93c034de50">More...</a><br /></td></tr>
@@ -142,10 +142,28 @@ Protected Attributes</h2></td></tr>
 <p>Constructor, sets the path to the XML file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>- path to the XML file </td></tr>
+    <tr><td class="paramname">path</td><td>- path to the XML file</td></tr>
   </table>
   </dd>
 </dl>
+<p>This is an implementation of <a class="el" href="classCodeBuilder.html">CodeBuilder</a> class </p>
+
+</div>
+</div>
+<a id="afdb2787e8a39b0c0aa7870a1d2c703ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb2787e8a39b0c0aa7870a1d2c703ec">&#9670;&nbsp;</a></span>~CodeBuilder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CodeBuilder::~CodeBuilder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -172,6 +190,34 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab3c62f476936526f065f41126cc90985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c62f476936526f065f41126cc90985">&#9670;&nbsp;</a></span>generateCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string CodeBuilder::generateCode </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>class_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classClassBuilder.html#a483ba9af40cc7bf76b44df7e5b3d58f3">ClassBuilder</a>, <a class="el" href="classAttributeBuilder.html#a6f26bee9fc639f404d61471784796b2b">AttributeBuilder</a>, and <a class="el" href="classMethodBuilder.html#af7f79408d65456173c9c2ef54327e077">MethodBuilder</a>.</p>
 
 </div>
 </div>
@@ -212,6 +258,33 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the path to the XML file. </p>
 <dl class="section return"><dt>Returns</dt><dd>string - path to the XML file </dd></dl>
+
+</div>
+</div>
+<a id="ae0740d513613d3e83130bada5f12621e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0740d513613d3e83130bada5f12621e">&#9670;&nbsp;</a></span>parse_document()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CodeBuilder::parse_document </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classMethodBuilder.html#aa89a7a45c1c18e9e0de1d20dc03ad848">MethodBuilder</a>, and <a class="el" href="classAttributeBuilder.html#a43aa3e3c381bec32ad7d811dae4ca5dd">AttributeBuilder</a>.</p>
 
 </div>
 </div>
@@ -358,7 +431,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/adam/code/studia/AutomaticCodeGenerator/include/<a class="el" href="codeBuilder_8hpp_source.html">codeBuilder.hpp</a></li>
-<li>/home/adam/code/studia/AutomaticCodeGenerator/src/codeBuilder.cpp</li>
+<li>/home/adam/code/studia/AutomaticCodeGenerator/src/<a class="el" href="codeBuilder_8cpp.html">codeBuilder.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

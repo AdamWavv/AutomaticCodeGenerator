@@ -1,5 +1,8 @@
 #include "../include/attributeBuilder.hpp"
 
+/**
+ * This is an implementation of  AttributeBuilder class
+*/
 AttributeBuilder::AttributeBuilder(std::string path)
     : CodeBuilder(path)
 {
@@ -7,12 +10,10 @@ AttributeBuilder::AttributeBuilder(std::string path)
 AttributeBuilder::~AttributeBuilder()
 {
 }
-
 std::string AttributeBuilder::generateCode(std::string class_name){
 
     std::vector<std::string> &vec = this->attribute_map[class_name];
     std::string code = "";
-    
     
     code += "\n";
     code += "\tdef __init__(self):\n";
@@ -77,8 +78,6 @@ void AttributeBuilder::parse_document(){
                 this->attribute_map.insert(std::pair<std::string, std::vector <std::string>>(class_node->first_attribute("Name")->value(), attribute_vector));
                 attribute_vector.clear();
             }
-            
-             
             file.close();
         }
         else{

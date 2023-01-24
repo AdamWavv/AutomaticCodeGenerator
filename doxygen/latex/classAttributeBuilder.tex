@@ -2,6 +2,10 @@
 \label{classAttributeBuilder}\index{AttributeBuilder@{AttributeBuilder}}
 
 
+{\ttfamily \#include $<$attribute\+Builder.\+hpp$>$}
+
+
+
 Inheritance diagram for Attribute\+Builder\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -21,8 +25,9 @@ Collaboration diagram for Attribute\+Builder\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAttributeBuilder_a52535b6be565eb6d07f307766dd976d5}\label{classAttributeBuilder_a52535b6be565eb6d07f307766dd976d5}} 
-{\bfseries Attribute\+Builder} (std\+::string path)
+\mbox{\hyperlink{classAttributeBuilder_a52535b6be565eb6d07f307766dd976d5}{Attribute\+Builder}} (std\+::string path)
+\item 
+\mbox{\hyperlink{classAttributeBuilder_a8afa8dadd1e12d09e19e876ec8da4dcd}{$\sim$\+Attribute\+Builder}} ()
 \item 
 void \mbox{\hyperlink{classAttributeBuilder_a43aa3e3c381bec32ad7d811dae4ca5dd}{parse\+\_\+document}} () override
 \begin{DoxyCompactList}\small\item\em parse data from xml file @detail parse\+\_\+document method parse data from xml file and stores it in attribute\+\_\+map \end{DoxyCompactList}\item 
@@ -31,6 +36,21 @@ std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $
 std\+::string \mbox{\hyperlink{classAttributeBuilder_a6f26bee9fc639f404d61471784796b2b}{generate\+Code}} (std\+::string class\+\_\+name)
 \begin{DoxyCompactList}\small\item\em generate code for attributes @detail generate\+Code method generates code for attributes based on data stored in attribute\+\_\+map \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAttributeBuilder_a52535b6be565eb6d07f307766dd976d5}\label{classAttributeBuilder_a52535b6be565eb6d07f307766dd976d5}} 
+\index{AttributeBuilder@{AttributeBuilder}!AttributeBuilder@{AttributeBuilder}}
+\index{AttributeBuilder@{AttributeBuilder}!AttributeBuilder@{AttributeBuilder}}
+\doxysubsubsection{\texorpdfstring{AttributeBuilder()}{AttributeBuilder()}}
+{\footnotesize\ttfamily Attribute\+Builder\+::\+Attribute\+Builder (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+This is an implementation of \mbox{\hyperlink{classAttributeBuilder}{Attribute\+Builder}} class \mbox{\Hypertarget{classAttributeBuilder_a8afa8dadd1e12d09e19e876ec8da4dcd}\label{classAttributeBuilder_a8afa8dadd1e12d09e19e876ec8da4dcd}} 
+\index{AttributeBuilder@{AttributeBuilder}!````~AttributeBuilder@{$\sim$AttributeBuilder}}
+\index{````~AttributeBuilder@{$\sim$AttributeBuilder}!AttributeBuilder@{AttributeBuilder}}
+\doxysubsubsection{\texorpdfstring{$\sim$AttributeBuilder()}{~AttributeBuilder()}}
+{\footnotesize\ttfamily Attribute\+Builder\+::$\sim$\+Attribute\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -51,7 +71,7 @@ generate code for attributes @detail generate\+Code method generates code for at
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}}.
+Implements \mbox{\hyperlink{classCodeBuilder_ab3c62f476936526f065f41126cc90985}{Code\+Builder}}.
 
 \mbox{\Hypertarget{classAttributeBuilder_af444917725c223493dc0fb1114cf4189}\label{classAttributeBuilder_af444917725c223493dc0fb1114cf4189}} 
 \index{AttributeBuilder@{AttributeBuilder}!get\_attribute\_map@{get\_attribute\_map}}
@@ -81,11 +101,11 @@ void
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}}.
+Reimplemented from \mbox{\hyperlink{classCodeBuilder_ae0740d513613d3e83130bada5f12621e}{Code\+Builder}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 /home/adam/code/studia/\+Automatic\+Code\+Generator/include/\mbox{\hyperlink{attributeBuilder_8hpp}{attribute\+Builder.\+hpp}}\item 
-/home/adam/code/studia/\+Automatic\+Code\+Generator/src/attribute\+Builder.\+cpp\end{DoxyCompactItemize}
+/home/adam/code/studia/\+Automatic\+Code\+Generator/src/\mbox{\hyperlink{attributeBuilder_8cpp}{attribute\+Builder.\+cpp}}\end{DoxyCompactItemize}

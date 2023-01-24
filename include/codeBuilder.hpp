@@ -24,7 +24,6 @@
     This class provides a base for building other classes that will parse data from xml file and generate code from it.
     It also provides basic functionalities for handling xml files and searching for specific nodes in the file.
 */
-
 class CodeBuilder
 {
 public:

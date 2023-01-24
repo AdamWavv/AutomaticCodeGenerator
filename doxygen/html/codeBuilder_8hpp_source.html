@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Automatic Code Generator: /home/adam/code/studia/AutomaticCodeGenerator/include/codeBuilder.hpp Source File</title>
+<title>My Project: /home/adam/code/studia/AutomaticCodeGenerator/include/codeBuilder.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,10 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Automatic Code Generator
-   &#160;<span id="projectnumber">0.0.1</span>
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">GeneratingobjectcodebasedonprovidedUMLdiagramclass</div>
   </td>
  </tr>
  </tbody>
@@ -71,7 +69,7 @@ $(function() {
 <div class="title">codeBuilder.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CODE_BUILDER_H</span></div>
+<a href="codeBuilder_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CODE_BUILDER_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CODE_BUILDER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
@@ -88,56 +86,59 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../lib/rapidxml-1.13/rapidxml.hpp&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classCodeBuilder.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCodeBuilder.html">CodeBuilder</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="classCodeBuilder.html#a4d7324963938358f5f000465aebb120e">CodeBuilder</a>(std::string path);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">* @brief Destructor</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;~<a class="code" href="classCodeBuilder.html">CodeBuilder</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//Methods</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">* @brief Pure virtual method for generating code, must be overridden by derived classes</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">* @param class_name - name of the class for which the code should be generated</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">* @return string - generated code</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">virtual</span> std::string generateCode(std::string class_name) = 0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">* @brief Virtual method for parsing data from the XML file, can be overridden by derived classes</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">virtual</span> <span class="keywordtype">void</span> parse_document();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCodeBuilder.html#ac529982258d534f54576df93c034de50">set_file_path</a>(std::string &amp;new_XML_file_path);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;std::string <a class="code" href="classCodeBuilder.html#a4fdaef43dfa685387391a617cc51effa">get_file_path</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;std::vector &lt;std::string&gt; <a class="code" href="classCodeBuilder.html#afc3268fd6293232ee42c9a2fbb2a1959">get_class_vector</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;rapidxml::xml_node&lt;&gt;* <a class="code" href="classCodeBuilder.html#afd7f1fd76ac9fe383e37a260c25fcb60">search_node</a>(<span class="keyword">const</span> std::string file_path, <span class="keyword">const</span> <span class="keywordtype">char</span>* node_name);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCodeBuilder.html#a7a4086207c27c04c1da7c13b27e23e91">clear</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classCodeBuilder.html#a15436e54e70ef9472edeabdf6eedd909">   88</a></span>&#160;std::vector &lt;std::string&gt; <a class="code" href="classCodeBuilder.html#a15436e54e70ef9472edeabdf6eedd909">class_vector</a>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classCodeBuilder.html#adbf2f03fbd951d2726d4ddbfa0c4781e">   94</a></span>&#160;std::unordered_map&lt;std::string, std::vector &lt;std::string&gt;&gt; <a class="code" href="classCodeBuilder.html#adbf2f03fbd951d2726d4ddbfa0c4781e">attribute_map</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classCodeBuilder.html#a7e84a361a179b2e7cde9960566187d58">  100</a></span>&#160;std::unordered_map&lt;std::string, std::vector &lt;std::string&gt;&gt; <a class="code" href="classCodeBuilder.html#a7e84a361a179b2e7cde9960566187d58">method_map</a>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;std::string xml_file_path;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classCodeBuilder.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCodeBuilder.html">CodeBuilder</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="classCodeBuilder.html#a4d7324963938358f5f000465aebb120e">CodeBuilder</a>(std::string path);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">* @brief Destructor</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<a class="code" href="classCodeBuilder.html#afdb2787e8a39b0c0aa7870a1d2c703ec">~CodeBuilder</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//Methods</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">* @brief Pure virtual method for generating code, must be overridden by derived classes</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">* @param class_name - name of the class for which the code should be generated</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">* @return string - generated code</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">virtual</span> std::string <a class="code" href="classCodeBuilder.html#ab3c62f476936526f065f41126cc90985">generateCode</a>(std::string class_name) = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">* @brief Virtual method for parsing data from the XML file, can be overridden by derived classes</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classCodeBuilder.html#ae0740d513613d3e83130bada5f12621e">parse_document</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCodeBuilder.html#ac529982258d534f54576df93c034de50">set_file_path</a>(std::string &amp;new_XML_file_path);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;std::string <a class="code" href="classCodeBuilder.html#a4fdaef43dfa685387391a617cc51effa">get_file_path</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;std::vector &lt;std::string&gt; <a class="code" href="classCodeBuilder.html#afc3268fd6293232ee42c9a2fbb2a1959">get_class_vector</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;rapidxml::xml_node&lt;&gt;* <a class="code" href="classCodeBuilder.html#afd7f1fd76ac9fe383e37a260c25fcb60">search_node</a>(<span class="keyword">const</span> std::string file_path, <span class="keyword">const</span> <span class="keywordtype">char</span>* node_name);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classCodeBuilder.html#a7a4086207c27c04c1da7c13b27e23e91">clear</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classCodeBuilder.html#a15436e54e70ef9472edeabdf6eedd909">   87</a></span>&#160;std::vector &lt;std::string&gt; <a class="code" href="classCodeBuilder.html#a15436e54e70ef9472edeabdf6eedd909">class_vector</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classCodeBuilder.html#adbf2f03fbd951d2726d4ddbfa0c4781e">   93</a></span>&#160;std::unordered_map&lt;std::string, std::vector &lt;std::string&gt;&gt; <a class="code" href="classCodeBuilder.html#adbf2f03fbd951d2726d4ddbfa0c4781e">attribute_map</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classCodeBuilder.html#a7e84a361a179b2e7cde9960566187d58">   99</a></span>&#160;std::unordered_map&lt;std::string, std::vector &lt;std::string&gt;&gt; <a class="code" href="classCodeBuilder.html#a7e84a361a179b2e7cde9960566187d58">method_map</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;std::string xml_file_path;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif //CODE_BUILDER_H</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif //CODE_BUILDER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassCodeBuilder_html_afc3268fd6293232ee42c9a2fbb2a1959"><div class="ttname"><a href="classCodeBuilder.html#afc3268fd6293232ee42c9a2fbb2a1959">CodeBuilder::get_class_vector</a></div><div class="ttdeci">std::vector&lt; std::string &gt; get_class_vector()</div><div class="ttdoc">Returns the vector of class names.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:24</div></div>
-<div class="ttc" id="aclassCodeBuilder_html_a7a4086207c27c04c1da7c13b27e23e91"><div class="ttname"><a href="classCodeBuilder.html#a7a4086207c27c04c1da7c13b27e23e91">CodeBuilder::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clears class data.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:102</div></div>
-<div class="ttc" id="aclassCodeBuilder_html_a7e84a361a179b2e7cde9960566187d58"><div class="ttname"><a href="classCodeBuilder.html#a7e84a361a179b2e7cde9960566187d58">CodeBuilder::method_map</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; method_map</div><div class="ttdoc">an unordered_map that stores the names of methods and corelates them with classes</div><div class="ttdef"><b>Definition:</b> codeBuilder.hpp:100</div></div>
-<div class="ttc" id="aclassCodeBuilder_html_ac529982258d534f54576df93c034de50"><div class="ttname"><a href="classCodeBuilder.html#ac529982258d534f54576df93c034de50">CodeBuilder::set_file_path</a></div><div class="ttdeci">void set_file_path(std::string &amp;new_XML_file_path)</div><div class="ttdoc">Sets the path to the XML file.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:12</div></div>
-<div class="ttc" id="aclassCodeBuilder_html"><div class="ttname"><a href="classCodeBuilder.html">CodeBuilder</a></div><div class="ttdef"><b>Definition:</b> codeBuilder.hpp:28</div></div>
-<div class="ttc" id="aclassCodeBuilder_html_a15436e54e70ef9472edeabdf6eedd909"><div class="ttname"><a href="classCodeBuilder.html#a15436e54e70ef9472edeabdf6eedd909">CodeBuilder::class_vector</a></div><div class="ttdeci">std::vector&lt; std::string &gt; class_vector</div><div class="ttdoc">protected Attributes</div><div class="ttdef"><b>Definition:</b> codeBuilder.hpp:88</div></div>
-<div class="ttc" id="aclassCodeBuilder_html_afd7f1fd76ac9fe383e37a260c25fcb60"><div class="ttname"><a href="classCodeBuilder.html#afd7f1fd76ac9fe383e37a260c25fcb60">CodeBuilder::search_node</a></div><div class="ttdeci">rapidxml::xml_node * search_node(const std::string file_path, const char *node_name)</div><div class="ttdoc">Search for a node in the XML file.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:28</div></div>
-<div class="ttc" id="aclassCodeBuilder_html_adbf2f03fbd951d2726d4ddbfa0c4781e"><div class="ttname"><a href="classCodeBuilder.html#adbf2f03fbd951d2726d4ddbfa0c4781e">CodeBuilder::attribute_map</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; attribute_map</div><div class="ttdoc">an unordered_map that stores the names of attributes and corelates them with classes</div><div class="ttdef"><b>Definition:</b> codeBuilder.hpp:94</div></div>
-<div class="ttc" id="aclassCodeBuilder_html_a4fdaef43dfa685387391a617cc51effa"><div class="ttname"><a href="classCodeBuilder.html#a4fdaef43dfa685387391a617cc51effa">CodeBuilder::get_file_path</a></div><div class="ttdeci">std::string get_file_path()</div><div class="ttdoc">Returns the path to the XML file.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:21</div></div>
-<div class="ttc" id="aclassCodeBuilder_html_a4d7324963938358f5f000465aebb120e"><div class="ttname"><a href="classCodeBuilder.html#a4d7324963938358f5f000465aebb120e">CodeBuilder::CodeBuilder</a></div><div class="ttdeci">CodeBuilder(std::string path)</div><div class="ttdoc">Constructor, sets the path to the XML file.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:4</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_afc3268fd6293232ee42c9a2fbb2a1959"><div class="ttname"><a href="classCodeBuilder.html#afc3268fd6293232ee42c9a2fbb2a1959">CodeBuilder::get_class_vector</a></div><div class="ttdeci">std::vector&lt; std::string &gt; get_class_vector()</div><div class="ttdoc">Returns the vector of class names.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:26</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_a7a4086207c27c04c1da7c13b27e23e91"><div class="ttname"><a href="classCodeBuilder.html#a7a4086207c27c04c1da7c13b27e23e91">CodeBuilder::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clears class data.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:104</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_a7e84a361a179b2e7cde9960566187d58"><div class="ttname"><a href="classCodeBuilder.html#a7e84a361a179b2e7cde9960566187d58">CodeBuilder::method_map</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; method_map</div><div class="ttdoc">an unordered_map that stores the names of methods and corelates them with classes</div><div class="ttdef"><b>Definition:</b> codeBuilder.hpp:99</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_ac529982258d534f54576df93c034de50"><div class="ttname"><a href="classCodeBuilder.html#ac529982258d534f54576df93c034de50">CodeBuilder::set_file_path</a></div><div class="ttdeci">void set_file_path(std::string &amp;new_XML_file_path)</div><div class="ttdoc">Sets the path to the XML file.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:14</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_ae0740d513613d3e83130bada5f12621e"><div class="ttname"><a href="classCodeBuilder.html#ae0740d513613d3e83130bada5f12621e">CodeBuilder::parse_document</a></div><div class="ttdeci">virtual void parse_document()</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:67</div></div>
+<div class="ttc" id="aclassCodeBuilder_html"><div class="ttname"><a href="classCodeBuilder.html">CodeBuilder</a></div><div class="ttdef"><b>Definition:</b> codeBuilder.hpp:27</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_a15436e54e70ef9472edeabdf6eedd909"><div class="ttname"><a href="classCodeBuilder.html#a15436e54e70ef9472edeabdf6eedd909">CodeBuilder::class_vector</a></div><div class="ttdeci">std::vector&lt; std::string &gt; class_vector</div><div class="ttdoc">protected Attributes</div><div class="ttdef"><b>Definition:</b> codeBuilder.hpp:87</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_afd7f1fd76ac9fe383e37a260c25fcb60"><div class="ttname"><a href="classCodeBuilder.html#afd7f1fd76ac9fe383e37a260c25fcb60">CodeBuilder::search_node</a></div><div class="ttdeci">rapidxml::xml_node * search_node(const std::string file_path, const char *node_name)</div><div class="ttdoc">Search for a node in the XML file.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:30</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_adbf2f03fbd951d2726d4ddbfa0c4781e"><div class="ttname"><a href="classCodeBuilder.html#adbf2f03fbd951d2726d4ddbfa0c4781e">CodeBuilder::attribute_map</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; attribute_map</div><div class="ttdoc">an unordered_map that stores the names of attributes and corelates them with classes</div><div class="ttdef"><b>Definition:</b> codeBuilder.hpp:93</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_a4fdaef43dfa685387391a617cc51effa"><div class="ttname"><a href="classCodeBuilder.html#a4fdaef43dfa685387391a617cc51effa">CodeBuilder::get_file_path</a></div><div class="ttdeci">std::string get_file_path()</div><div class="ttdoc">Returns the path to the XML file.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:23</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_a4d7324963938358f5f000465aebb120e"><div class="ttname"><a href="classCodeBuilder.html#a4d7324963938358f5f000465aebb120e">CodeBuilder::CodeBuilder</a></div><div class="ttdeci">CodeBuilder(std::string path)</div><div class="ttdoc">Constructor, sets the path to the XML file.</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:6</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_ab3c62f476936526f065f41126cc90985"><div class="ttname"><a href="classCodeBuilder.html#ab3c62f476936526f065f41126cc90985">CodeBuilder::generateCode</a></div><div class="ttdeci">virtual std::string generateCode(std::string class_name)=0</div></div>
+<div class="ttc" id="aclassCodeBuilder_html_afdb2787e8a39b0c0aa7870a1d2c703ec"><div class="ttname"><a href="classCodeBuilder.html#afdb2787e8a39b0c0aa7870a1d2c703ec">CodeBuilder::~CodeBuilder</a></div><div class="ttdeci">~CodeBuilder()</div><div class="ttdef"><b>Definition:</b> codeBuilder.cpp:10</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

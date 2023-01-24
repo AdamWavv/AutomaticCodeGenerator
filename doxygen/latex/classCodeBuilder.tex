@@ -2,6 +2,10 @@
 \label{classCodeBuilder}\index{CodeBuilder@{CodeBuilder}}
 
 
+{\ttfamily \#include $<$code\+Builder.\+hpp$>$}
+
+
+
 Inheritance diagram for Code\+Builder\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -14,11 +18,11 @@ Inheritance diagram for Code\+Builder\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classCodeBuilder_a4d7324963938358f5f000465aebb120e}{Code\+Builder}} (std\+::string path)
 \begin{DoxyCompactList}\small\item\em Constructor, sets the path to the X\+ML file. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCodeBuilder_ab3c62f476936526f065f41126cc90985}\label{classCodeBuilder_ab3c62f476936526f065f41126cc90985}} 
-virtual std\+::string {\bfseries generate\+Code} (std\+::string class\+\_\+name)=0
+\mbox{\hyperlink{classCodeBuilder_afdb2787e8a39b0c0aa7870a1d2c703ec}{$\sim$\+Code\+Builder}} ()
 \item 
-\mbox{\Hypertarget{classCodeBuilder_ae0740d513613d3e83130bada5f12621e}\label{classCodeBuilder_ae0740d513613d3e83130bada5f12621e}} 
-virtual void {\bfseries parse\+\_\+document} ()
+virtual std\+::string \mbox{\hyperlink{classCodeBuilder_ab3c62f476936526f065f41126cc90985}{generate\+Code}} (std\+::string class\+\_\+name)=0
+\item 
+virtual void \mbox{\hyperlink{classCodeBuilder_ae0740d513613d3e83130bada5f12621e}{parse\+\_\+document}} ()
 \item 
 void \mbox{\hyperlink{classCodeBuilder_ac529982258d534f54576df93c034de50}{set\+\_\+file\+\_\+path}} (std\+::string \&new\+\_\+\+X\+M\+L\+\_\+file\+\_\+path)
 \begin{DoxyCompactList}\small\item\em Sets the path to the X\+ML file. \end{DoxyCompactList}\item 
@@ -54,9 +58,15 @@ Constructor, sets the path to the X\+ML file.
 
 
 \begin{DoxyParams}{Parameters}
-{\em path} & -\/ path to the X\+ML file \\
+{\em path} & -\/ path to the X\+ML file\\
 \hline
 \end{DoxyParams}
+This is an implementation of \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}} class \mbox{\Hypertarget{classCodeBuilder_afdb2787e8a39b0c0aa7870a1d2c703ec}\label{classCodeBuilder_afdb2787e8a39b0c0aa7870a1d2c703ec}} 
+\index{CodeBuilder@{CodeBuilder}!````~CodeBuilder@{$\sim$CodeBuilder}}
+\index{````~CodeBuilder@{$\sim$CodeBuilder}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{$\sim$CodeBuilder()}{~CodeBuilder()}}
+{\footnotesize\ttfamily Code\+Builder\+::$\sim$\+Code\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -75,6 +85,16 @@ Clears class data.
 {\em new\+\_\+\+X\+M\+L\+\_\+file\+\_\+path} & -\/ new path to the X\+ML file \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classCodeBuilder_ab3c62f476936526f065f41126cc90985}\label{classCodeBuilder_ab3c62f476936526f065f41126cc90985}} 
+\index{CodeBuilder@{CodeBuilder}!generateCode@{generateCode}}
+\index{generateCode@{generateCode}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{generateCode()}{generateCode()}}
+{\footnotesize\ttfamily virtual std\+::string Code\+Builder\+::generate\+Code (\begin{DoxyParamCaption}\item[{std\+::string}]{class\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classClassBuilder_a483ba9af40cc7bf76b44df7e5b3d58f3}{Class\+Builder}}, \mbox{\hyperlink{classAttributeBuilder_a6f26bee9fc639f404d61471784796b2b}{Attribute\+Builder}}, and \mbox{\hyperlink{classMethodBuilder_af7f79408d65456173c9c2ef54327e077}{Method\+Builder}}.
+
 \mbox{\Hypertarget{classCodeBuilder_afc3268fd6293232ee42c9a2fbb2a1959}\label{classCodeBuilder_afc3268fd6293232ee42c9a2fbb2a1959}} 
 \index{CodeBuilder@{CodeBuilder}!get\_class\_vector@{get\_class\_vector}}
 \index{get\_class\_vector@{get\_class\_vector}!CodeBuilder@{CodeBuilder}}
@@ -101,6 +121,16 @@ Returns the path to the X\+ML file.
 \begin{DoxyReturn}{Returns}
 string -\/ path to the X\+ML file 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classCodeBuilder_ae0740d513613d3e83130bada5f12621e}\label{classCodeBuilder_ae0740d513613d3e83130bada5f12621e}} 
+\index{CodeBuilder@{CodeBuilder}!parse\_document@{parse\_document}}
+\index{parse\_document@{parse\_document}!CodeBuilder@{CodeBuilder}}
+\doxysubsubsection{\texorpdfstring{parse\_document()}{parse\_document()}}
+{\footnotesize\ttfamily void Code\+Builder\+::parse\+\_\+document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classMethodBuilder_aa89a7a45c1c18e9e0de1d20dc03ad848}{Method\+Builder}}, and \mbox{\hyperlink{classAttributeBuilder_a43aa3e3c381bec32ad7d811dae4ca5dd}{Attribute\+Builder}}.
+
 \mbox{\Hypertarget{classCodeBuilder_afd7f1fd76ac9fe383e37a260c25fcb60}\label{classCodeBuilder_afd7f1fd76ac9fe383e37a260c25fcb60}} 
 \index{CodeBuilder@{CodeBuilder}!search\_node@{search\_node}}
 \index{search\_node@{search\_node}!CodeBuilder@{CodeBuilder}}
@@ -175,5 +205,5 @@ this unordered\+\_\+map is used to hold the names of methods that are parsed fro
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/adam/code/studia/\+Automatic\+Code\+Generator/include/code\+Builder.\+hpp\item 
-/home/adam/code/studia/\+Automatic\+Code\+Generator/src/code\+Builder.\+cpp\end{DoxyCompactItemize}
+/home/adam/code/studia/\+Automatic\+Code\+Generator/include/\mbox{\hyperlink{codeBuilder_8hpp}{code\+Builder.\+hpp}}\item 
+/home/adam/code/studia/\+Automatic\+Code\+Generator/src/\mbox{\hyperlink{codeBuilder_8cpp}{code\+Builder.\+cpp}}\end{DoxyCompactItemize}

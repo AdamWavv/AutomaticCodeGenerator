@@ -1,5 +1,7 @@
 #include "../include/codeBuilder.hpp"
-
+/**
+ * This is an implementation of CodeBuilder class
+*/
 
 CodeBuilder::CodeBuilder(std::string path)
     : xml_file_path(path)

@@ -1,5 +1,7 @@
 #include "../include/classBuilder.hpp"
-
+/**
+ * This is an implementation of ClassBuilder class
+*/
 ClassBuilder::ClassBuilder(std::string path)
     : CodeBuilder(path)
 {

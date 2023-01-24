@@ -1,5 +1,7 @@
 #include "../include/methodBuilder.hpp"
-
+/**
+ * This is an implementation of MethodBuilder class
+*/
 MethodBuilder::MethodBuilder(std::string path)
     : CodeBuilder(path)
 {

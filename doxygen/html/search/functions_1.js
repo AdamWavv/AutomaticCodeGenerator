@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['generatecode_29',['generateCode',['../classAttributeBuilder.html#a6f26bee9fc639f404d61471784796b2b',1,'AttributeBuilder::generateCode()'],['../classClassBuilder.html#a483ba9af40cc7bf76b44df7e5b3d58f3',1,'ClassBuilder::generateCode()'],['../classMethodBuilder.html#af7f79408d65456173c9c2ef54327e077',1,'MethodBuilder::generateCode()']]],
-  ['get_5fattribute_5fmap_30',['get_attribute_map',['../classAttributeBuilder.html#af444917725c223493dc0fb1114cf4189',1,'AttributeBuilder']]],
-  ['get_5fclass_5fvector_31',['get_class_vector',['../classCodeBuilder.html#afc3268fd6293232ee42c9a2fbb2a1959',1,'CodeBuilder']]],
-  ['get_5ffile_5fpath_32',['get_file_path',['../classCodeBuilder.html#a4fdaef43dfa685387391a617cc51effa',1,'CodeBuilder']]],
-  ['get_5fmethod_5fmap_33',['get_method_map',['../classMethodBuilder.html#a6303ab13c10ba667c465be7be013d4cc',1,'MethodBuilder']]]
+  ['classbuilder_44',['ClassBuilder',['../classClassBuilder.html#a2726e16a6447e3f0c3ed0c97b7d01967',1,'ClassBuilder']]],
+  ['clear_45',['clear',['../classCodeBuilder.html#a7a4086207c27c04c1da7c13b27e23e91',1,'CodeBuilder']]],
+  ['codebuilder_46',['CodeBuilder',['../classCodeBuilder.html#a4d7324963938358f5f000465aebb120e',1,'CodeBuilder']]]
 ];

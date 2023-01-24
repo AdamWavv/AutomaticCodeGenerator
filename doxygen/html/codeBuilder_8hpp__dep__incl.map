@@ -1,6 +1,11 @@
 <map id="/home/adam/code/studia/AutomaticCodeGenerator/include/codeBuilder.hpp" name="/home/adam/code/studia/AutomaticCodeGenerator/include/codeBuilder.hpp">
-<area shape="rect" id="node1" title="CodeBuilder class header file." alt="" coords="155,5,345,61"/>
-<area shape="rect" id="node2" href="$attributeBuilder_8hpp.html" title="class for parsing and generating attributes from XML file @detail this class inherits from CodeBuilde..." alt="" coords="5,109,212,165"/>
-<area shape="rect" id="node3" href="$classBuilder_8hpp_source.html" title=" " alt="" coords="155,213,345,269"/>
-<area shape="rect" id="node4" href="$methodBuilder_8hpp.html" title="This file contains the declaration of the MethodBuilder class. @detail The MethodBuilder class inheri..." alt="" coords="288,109,489,165"/>
+<area shape="rect" id="node1" title=" " alt="" coords="405,5,596,61"/>
+<area shape="rect" id="node2" href="$attributeBuilder_8hpp.html" title="class for parsing and generating attributes from XML file @detail this class inherits from CodeBuilde..." alt="" coords="227,109,433,165"/>
+<area shape="rect" id="node3" href="$classBuilder_8hpp.html" title=" " alt="" coords="5,213,196,269"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="312,317,503,373"/>
+<area shape="rect" id="node7" href="$methodBuilder_8hpp.html" title="This file contains the declaration of the MethodBuilder class. @detail The MethodBuilder class inheri..." alt="" coords="539,109,740,165"/>
+<area shape="rect" id="node9" href="$codeBuilder_8cpp.html" title=" " alt="" coords="764,109,955,165"/>
+<area shape="rect" id="node6" href="$attributeBuilder_8cpp.html" title=" " alt="" coords="272,213,463,269"/>
+<area shape="rect" id="node4" href="$classBuilder_8cpp.html" title=" " alt="" coords="5,317,196,373"/>
+<area shape="rect" id="node8" href="$methodBuilder_8cpp.html" title=" " alt="" coords="589,213,780,269"/>
 </map>
