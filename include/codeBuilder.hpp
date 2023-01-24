@@ -16,7 +16,7 @@
 #include "../lib/rapidxml-1.13/rapidxml.hpp"
 
 /**
-* @class ClassBuilder
+* @class CodeBuilder
 * @brief CodeBuilder class header file
 * @details This Super class is responsible for generating code for classes. It provides based methods and attributes.
 * @author Adam Wawerski

@@ -1,5 +1,5 @@
 <map id="CodeBuilder" name="CodeBuilder">
-<area shape="rect" id="node1" title=" " alt="" coords="156,5,257,32"/>
+<area shape="rect" id="node1" title="CodeBuilder class header file." alt="" coords="156,5,257,32"/>
 <area shape="rect" id="node2" href="$classAttributeBuilder.html" title=" " alt="" coords="5,80,131,107"/>
 <area shape="rect" id="node3" href="$classClassBuilder.html" title="Class for generating code for classes." alt="" coords="155,80,258,107"/>
 <area shape="rect" id="node4" href="$classMethodBuilder.html" title=" " alt="" coords="283,80,400,107"/>

@@ -4,7 +4,7 @@
 #include "codeBuilder.hpp"
 
 /**
-
+ *  @class MethodBuilder
     @file methodBuilder.hpp
     @brief This file contains the declaration of the MethodBuilder class.
     @detail The MethodBuilder class inherits from the CodeBuilder class, and is used to parse data from an XML file and generate code for methods in a class.

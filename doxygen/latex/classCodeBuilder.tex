@@ -2,11 +2,17 @@
 \label{classCodeBuilder}\index{CodeBuilder@{CodeBuilder}}
 
 
+\mbox{\hyperlink{classCodeBuilder}{Code\+Builder}} class header file.  
+
+
+
+
 {\ttfamily \#include $<$code\+Builder.\+hpp$>$}
 
 
 
-Inheritance diagram for Code\+Builder\+:\nopagebreak
+Inheritance diagram for Code\+Builder\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -43,6 +49,17 @@ std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $
 \begin{DoxyCompactList}\small\item\em an unordered\+\_\+map that stores the names of attributes and corelates them with classes \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classCodeBuilder_a7e84a361a179b2e7cde9960566187d58}{method\+\_\+map}}
 \begin{DoxyCompactList}\small\item\em an unordered\+\_\+map that stores the names of methods and corelates them with classes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCodeBuilder}{Code\+Builder}} class header file. 
+
+This Super class is responsible for generating code for classes. It provides based methods and attributes. \begin{DoxyAuthor}{Author}
+Adam Wawerski 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+, fstream, vector, unordered\+\_\+map, iterator, string, cstring, stdio.\+h, type\+\_\+traits, algorithm, regex, \char`\"{}../lib/rapidxml-\/1.\+13/rapidxml.\+hpp\char`\"{} This class provides a base for building other classes that will parse data from xml file and generate code from it. It also provides basic functionalities for handling xml files and searching for specific nodes in the file. 
+\end{DoxyAuthor}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
