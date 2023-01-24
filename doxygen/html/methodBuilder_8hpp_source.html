@@ -74,7 +74,7 @@ $(function() {
 <a href="methodBuilder_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef METHOD_BUILDER_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define METHOD_BUILDER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="codeBuilder_8hpp.html">codeBuilder.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;codeBuilder.hpp&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classMethodBuilder.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMethodBuilder.html">MethodBuilder</a>: <span class="keyword">public</span> <a class="code" href="classCodeBuilder.html">CodeBuilder</a></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
@@ -84,28 +84,24 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="classMethodBuilder.html#a55622a008954b22132be2e4299a6cdc7">~MethodBuilder</a>();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//Methods</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="classMethodBuilder.html#aa89a7a45c1c18e9e0de1d20dc03ad848">parse_document</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMethodBuilder.html#aa89a7a45c1c18e9e0de1d20dc03ad848">parse_document</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;std::string <a class="code" href="classMethodBuilder.html#af7f79408d65456173c9c2ef54327e077">generateCode</a>(std::string class_name);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;std::unordered_map&lt;std::string, std::vector&lt;std::string&gt;&gt; <a class="code" href="classMethodBuilder.html#a69ca29b919e84e2faabf52eeeb39cba5">get_method_map</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;std::unordered_map&lt;std::string, std::vector&lt;std::string&gt;&gt; <a class="code" href="classMethodBuilder.html#a6303ab13c10ba667c465be7be013d4cc">get_method_map</a>();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//Attributes</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassMethodBuilder_html_af7f79408d65456173c9c2ef54327e077"><div class="ttname"><a href="classMethodBuilder.html#af7f79408d65456173c9c2ef54327e077">MethodBuilder::generateCode</a></div><div class="ttdeci">std::string generateCode(std::string class_name)</div><div class="ttdoc">Generates code for methods in a class, based on the data parsed from the XML file.</div><div class="ttdef"><b>Definition:</b> methodBuilder.cpp:16</div></div>
+<div class="ttc" id="aclassMethodBuilder_html_af7f79408d65456173c9c2ef54327e077"><div class="ttname"><a href="classMethodBuilder.html#af7f79408d65456173c9c2ef54327e077">MethodBuilder::generateCode</a></div><div class="ttdeci">std::string generateCode(std::string class_name)</div><div class="ttdoc">Generates code for methods in a class, based on the data parsed from the XML file.</div><div class="ttdef"><b>Definition:</b> methodBuilder.cpp:11</div></div>
 <div class="ttc" id="aclassCodeBuilder_html"><div class="ttname"><a href="classCodeBuilder.html">CodeBuilder</a></div><div class="ttdef"><b>Definition:</b> codeBuilder.hpp:28</div></div>
-<div class="ttc" id="aclassMethodBuilder_html_a69ca29b919e84e2faabf52eeeb39cba5"><div class="ttname"><a href="classMethodBuilder.html#a69ca29b919e84e2faabf52eeeb39cba5">MethodBuilder::get_method_map</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; get_method_map()</div><div class="ttdoc">Getter method for the method_map attribute.</div><div class="ttdef"><b>Definition:</b> methodBuilder.cpp:12</div></div>
+<div class="ttc" id="aclassMethodBuilder_html_a6303ab13c10ba667c465be7be013d4cc"><div class="ttname"><a href="classMethodBuilder.html#a6303ab13c10ba667c465be7be013d4cc">MethodBuilder::get_method_map</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; get_method_map()</div><div class="ttdoc">Getter method for the method_map attribute.</div></div>
 <div class="ttc" id="aclassMethodBuilder_html_a55622a008954b22132be2e4299a6cdc7"><div class="ttname"><a href="classMethodBuilder.html#a55622a008954b22132be2e4299a6cdc7">MethodBuilder::~MethodBuilder</a></div><div class="ttdeci">~MethodBuilder()</div><div class="ttdoc">Destructor for the MethodBuilder class.</div><div class="ttdef"><b>Definition:</b> methodBuilder.cpp:8</div></div>
 <div class="ttc" id="aclassMethodBuilder_html"><div class="ttname"><a href="classMethodBuilder.html">MethodBuilder</a></div><div class="ttdef"><b>Definition:</b> methodBuilder.hpp:15</div></div>
-<div class="ttc" id="acodeBuilder_8hpp_html"><div class="ttname"><a href="codeBuilder_8hpp.html">codeBuilder.hpp</a></div><div class="ttdoc">CodeBuilder class header file.</div></div>
 <div class="ttc" id="aclassMethodBuilder_html_a394250d7a06bf966a86414131f2fd84c"><div class="ttname"><a href="classMethodBuilder.html#a394250d7a06bf966a86414131f2fd84c">MethodBuilder::MethodBuilder</a></div><div class="ttdeci">MethodBuilder(std::string path)</div><div class="ttdoc">Constructor for the MethodBuilder class.</div><div class="ttdef"><b>Definition:</b> methodBuilder.cpp:3</div></div>
-<div class="ttc" id="aclassMethodBuilder_html_aa89a7a45c1c18e9e0de1d20dc03ad848"><div class="ttname"><a href="classMethodBuilder.html#aa89a7a45c1c18e9e0de1d20dc03ad848">MethodBuilder::parse_document</a></div><div class="ttdeci">void parse_document() override</div><div class="ttdoc">Overriden function from the CodeBuilder class, used to parse the data from the XML file.</div><div class="ttdef"><b>Definition:</b> methodBuilder.cpp:46</div></div>
+<div class="ttc" id="aclassMethodBuilder_html_aa89a7a45c1c18e9e0de1d20dc03ad848"><div class="ttname"><a href="classMethodBuilder.html#aa89a7a45c1c18e9e0de1d20dc03ad848">MethodBuilder::parse_document</a></div><div class="ttdeci">void parse_document() override</div><div class="ttdoc">Methods.</div><div class="ttdef"><b>Definition:</b> methodBuilder.cpp:41</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

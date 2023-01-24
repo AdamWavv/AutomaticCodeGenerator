@@ -2,8 +2,7 @@
 \label{classMethodBuilder}\index{MethodBuilder@{MethodBuilder}}
 
 
-Inheritance diagram for Method\+Builder\+:
-\nopagebreak
+Inheritance diagram for Method\+Builder\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Method\+Builder\+:
 \end{figure}
 
 
-Collaboration diagram for Method\+Builder\+:
-\nopagebreak
+Collaboration diagram for Method\+Builder\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,12 +26,11 @@ Collaboration diagram for Method\+Builder\+:
 \mbox{\Hypertarget{classMethodBuilder_a55622a008954b22132be2e4299a6cdc7}\label{classMethodBuilder_a55622a008954b22132be2e4299a6cdc7}} 
 \mbox{\hyperlink{classMethodBuilder_a55622a008954b22132be2e4299a6cdc7}{$\sim$\+Method\+Builder}} ()
 \begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classMethodBuilder}{Method\+Builder}} class. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classMethodBuilder_aa89a7a45c1c18e9e0de1d20dc03ad848}\label{classMethodBuilder_aa89a7a45c1c18e9e0de1d20dc03ad848}} 
 void \mbox{\hyperlink{classMethodBuilder_aa89a7a45c1c18e9e0de1d20dc03ad848}{parse\+\_\+document}} () override
-\begin{DoxyCompactList}\small\item\em Overriden function from the \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}} class, used to parse the data from the X\+ML file. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Methods. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classMethodBuilder_af7f79408d65456173c9c2ef54327e077}{generate\+Code}} (std\+::string class\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Generates code for methods in a class, based on the data parsed from the X\+ML file. \end{DoxyCompactList}\item 
-std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classMethodBuilder_a69ca29b919e84e2faabf52eeeb39cba5}{get\+\_\+method\+\_\+map}} ()
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classMethodBuilder_a6303ab13c10ba667c465be7be013d4cc}{get\+\_\+method\+\_\+map}} ()
 \begin{DoxyCompactList}\small\item\em Getter method for the method\+\_\+map attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -73,17 +70,17 @@ Generates code for methods in a class, based on the data parsed from the X\+ML f
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A string containing the generated code 
+std\+::string containing the generated code 
 \end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}}.
 
-\mbox{\Hypertarget{classMethodBuilder_a69ca29b919e84e2faabf52eeeb39cba5}\label{classMethodBuilder_a69ca29b919e84e2faabf52eeeb39cba5}} 
+\mbox{\Hypertarget{classMethodBuilder_a6303ab13c10ba667c465be7be013d4cc}\label{classMethodBuilder_a6303ab13c10ba667c465be7be013d4cc}} 
 \index{MethodBuilder@{MethodBuilder}!get\_method\_map@{get\_method\_map}}
 \index{get\_method\_map@{get\_method\_map}!MethodBuilder@{MethodBuilder}}
 \doxysubsubsection{\texorpdfstring{get\_method\_map()}{get\_method\_map()}}
-{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ Method\+Builder\+::get\+\_\+method\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::vector$<$std\+::string$>$ $>$ Method\+Builder\+::get\+\_\+method\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -92,6 +89,20 @@ Getter method for the method\+\_\+map attribute.
 \begin{DoxyReturn}{Returns}
 An unordered\+\_\+map containing the methods of each class in the form $<$class\+\_\+name, vector of method names$>$ 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classMethodBuilder_aa89a7a45c1c18e9e0de1d20dc03ad848}\label{classMethodBuilder_aa89a7a45c1c18e9e0de1d20dc03ad848}} 
+\index{MethodBuilder@{MethodBuilder}!parse\_document@{parse\_document}}
+\index{parse\_document@{parse\_document}!MethodBuilder@{MethodBuilder}}
+\doxysubsubsection{\texorpdfstring{parse\_document()}{parse\_document()}}
+{\footnotesize\ttfamily void Method\+Builder\+::parse\+\_\+document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Methods. 
+
+Overriden function from the \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}} class, used to parse the data from the X\+ML file 
+
+Reimplemented from \mbox{\hyperlink{classCodeBuilder}{Code\+Builder}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
